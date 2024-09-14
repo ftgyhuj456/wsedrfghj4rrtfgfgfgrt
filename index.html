@@ -146,6 +146,7 @@
 		document.getElementById("ButtonsContainer").style.display = 'none';
 		document.getElementById("GamesContainer").style.display = 'flex';
     document.getElementById("game-display-container").style.display = 'none';
+    document.getElementById("game-display-iframe").src = "";
     document.getElementById("audioSource").volume = 1;
   }
 
@@ -160,6 +161,7 @@
     } else if (iframe.msRequestFullscreen) { // IE/Edge
       iframe.msRequestFullscreen();
     }
+    iframe
   }
 </script>
 
@@ -238,32 +240,37 @@
       {
         name: "1v1.lol",
         img: "../assets/1v1lol.avif",
-        url: "games/1v1lol/", // Replace with actual game URL
+        url: "games/1v1lol/1v1lol/index.html", // Replace with actual game URL
       },
       {
         name: "Bitlife",
         img: "../assets/bitlife.jpg",
-        url: "games/bitlife/", // Replace with actual game URL
+        url: "games/bitlife/bitlife.html", // Replace with actual game URL
       },
       {
-        name: "Super Mario 64",
-        img: "../assets/sm64.webp",
-        url: "games/sm64/", // Replace with actual game URL
+        name: "Alien Hominid",
+        img: "../assets/alienhominid.jfif",
+        url: "games/alienhominid/alienhominid.html", // Replace with actual game URL
       },
       {
-        name: "Slope",
-        img: "../assets/slope.png",
-        url: "games/slope/", // Replace with actual game URL
+        name: "Eaglercraft 1.5.2",
+        img: "../assets/eaglercraft.jpg",
+        url: "games/eaglercraft/eaglercraft.1.5.2.html", // Replace with actual game URL
       },
       {
-        name: "1v1.lol",
-        img: "../assets/1v1lol.avif",
-        url: "games/1v1lol/", // Replace with actual game URL
+        name: "Cookie Clicker",
+        img: "../assets/cookieclicker.jpg",
+        url: "games/cookieclicker/cookie-clicker-master/cookieclicker.html", // Replace with actual game URL
       },
       {
-        name: "Bitlife",
-        img: "../assets/bitlife.jpg",
-        url: "games/bitlife/", // Replace with actual game URL
+        name: "Bloxorz",
+        img: "../assets/bloxorz.jfif",
+        url: "games/bloxorz/bloxorz.html", // Replace with actual game URL
+      },
+      {
+        name: "RetroArch",
+        img: "../assets/retroarch.png",
+        url: "games/webretro-v6.5/index.html", // Replace with actual game URL
       },
       // Add more games as needed
     ];
