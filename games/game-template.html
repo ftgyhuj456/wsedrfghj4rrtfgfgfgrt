@@ -1,0 +1,258 @@
+<!--
+  Hit RUN to see this project in action!
+
+  This project will auto-refresh as you edit the HTML, CSS and JS. See README.md for more info (including how to disable auto-refresh and install packages).
+-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <link rel="icon" href="../assets/obsidians-unblocked-favicon-white.png" type="image/x-icon">
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Obsidians Unblocked Template</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <link href='https://fonts.googleapis.com/css?family=Alfa Slab One' rel='stylesheet'>
+
+  <style>
+    body {
+      background-color: #1f1f1f;
+      color: #ffffff;
+      font-family: Arial, sans-serif;
+      overflow-x: hidden;
+    }
+
+    li {
+      float: right;
+    }
+
+    .GameImg:hover {
+      filter: brightness(80%);
+    }
+
+    .OptionsButton:hover {
+      filter: brightness(80%);
+    }
+  </style>
+
+</head>
+
+<body>
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <img class="navbar-brand" href="#" src="../assets/obsidians-unblocked-high-resolution-logo-transparent.png"
+          style="background-color: black;"><img>
+      </div>
+      <ul class="nav navbar-nav" style="background-color: rgb(20, 20, 20);">
+        <li><a href="../">Home</a></li>
+        <li><a class="active" href="../games/">Games</a></li>
+        <li><a class="active" href="../../info/">Info</a></li>
+        <li><a class="active" href="../../changes/">Changelog</a></li>
+        <li><a class="active" href="../../bypass/">Bypass</a></li>
+      </ul>
+    </div>
+  </nav>
+
+
+  <div class="ObsidiansUnblockedHeader" id="Logo" style="margin-left: -16%;">
+    <br>
+    <center>
+      <img src="../assets/obsidians-unblocked-high-resolution-logo-transparent.png" style="scale: 25%; "></img>
+    </center>
+  </div>
+
+  <script>
+    var isChromebook = /CrOS/.test(navigator.userAgent);
+    if (isChromebook) {
+      document.getElementById("Logo").style.marginLeft = "-24%";
+    } else {
+      document.getElementById("Logo").style.marginLeft = "-16%";
+    }
+  </script>
+
+  <div class="GameTitle" id="GameTitle" style="margin-left: 0%;">
+    <h1>
+      <strong>
+        Game Title Goes Here
+      </strong>
+    </h1>
+  </div>
+
+  <div class="GameWindow" id="GameWindow">
+    <iframe src="PUT THE EMULATOR GAME HTML FILE HERE" id="GameIframe" width="850" height="500" style="
+      border-radius: 15px;
+      border: 5px solid #ff4057;
+      padding-bottom: 40px;
+    "> </iframe>
+
+    <div style="max-width: 56%;">
+
+      <button style="border: none; background-color: #202020;" onclick="GameFullscreen()">
+        <img src="../../assets/fullscreen.png"
+          style="scale: 10%; background-color: #202020; position: absolute; left: 710px; top: 790px;"
+          class="OptionsButton">
+      </button>
+
+    </div>
+
+    <div class="GameInfo" id="GameInfo" style="font-size: 15px; max-width: 700px;">
+      <p>
+        <strong>
+          Embark on an interstellar journey in "Galactic Odyssey," a mesmerizing space exploration game that defies the
+          boundaries of the cosmos. Set in a distant future where humanity has discovered the secrets of
+          faster-than-light
+          travel, you find yourself at the helm of the starship "Celestial Wanderer."
+          <br><br>
+          Your mission: to navigate uncharted galaxies, encounter mysterious alien civilizations, and uncover the
+          enigmatic remnants of a long-lost ancient race.
+          <br><br>
+          As the captain of the Celestial Wanderer, navigate through vibrant nebulae, traverse treacherous asteroid
+          fields, and delve into the heart of massive cosmic anomalies. The game offers a seamless blend of intense
+          space
+          combat, strategic resource management, and diplomatic interactions with alien species.
+          <br><br>
+          Forge alliances with powerful extraterrestrial factions or face the consequences of interstellar conflicts
+          that
+          may alter the course of your odyssey.
+          <br><br>
+          Equip your starship with cutting-edge technology, from advanced weaponry to state-of-the-art exploration
+          modules. Encounter diverse and imaginative alien races, each with its own unique culture, technology, and
+          history.
+          <br><br>
+          Your choices and actions will shape the narrative, influencing the fate of the galaxies you explore and the
+          relationships you form along the way.
+          <br><br>
+          "Galactic Odyssey" promises an immersive experience with stunning visuals, a dynamic soundtrack that adapts to
+          the ever-changing cosmos, and a storyline that unfolds across the vastness of space. Are you ready to chart a
+          course through the unknown and become a legend in the annals of interstellar exploration? The cosmos awaits,
+          Captain. Engage warp drive and begin your Galactic Odyssey today!
+        </strong>
+      </p>
+    </div>
+
+
+    <br>
+    <div class="GameCredits" id="GameCredits" style="font-size: 15px; max-width: 700px; background-color: black;">
+      <p>
+        <strong>
+          Game Credits:
+        </strong>
+        <br>
+        Nintendo
+        <br>
+        @SevenworksDev on github
+        <br>
+        @jscraft on replit
+        <br>
+        Chase and Wickl
+      </p>
+    </div>
+
+
+    <div class="OtherGames" id="OtherGames"
+      style="background-color: #202020; position: absolute; margin-left: 83%; margin-top: -87%;">
+
+      <h1>
+        <strong>
+          Other Games
+        </strong>
+      </h1>
+
+      <button type="button" class="GameButton" onclick="" style="background-color: #202020; border: none;"><img
+          class="GameImg" src="../../assets/slope.png" width="250" height="150" style="border-radius: 15px;
+      border: 5px solid #ff4057;
+      padding: 0px;
+      "></img></button>
+
+      <br>
+
+      <button type="button" class="GameButton" onclick="" style="background-color: #202020; border: none;"><img
+          class="GameImg" src="../../assets/ducklife.webp" width="250" height="150" style="border-radius: 15px;
+      border: 5px solid #ff4057;
+      padding: 0px;
+      "></img></button>
+
+      <br>
+
+      <button type="button" class="GameButton" onclick="" style="background-color: #202020; border: none;"><img
+          class="GameImg" src="../../assets/gunmayhem.avif" width="250" height="150" style="border-radius: 15px;
+      border: 5px solid #ff4057;
+      padding: 0px;
+      "></img></button>
+
+      <br>
+
+      <button type="button" class="GameButton" onclick="" style="background-color: #202020; border: none;"><img
+          class="GameImg" src="../../assets/snake.jpg" width="250" height="150" style="border-radius: 15px;
+      border: 5px solid #ff4057;
+      padding: 0px;
+      "></img></button>
+
+
+    </div>
+
+
+
+
+
+    <br>
+
+    <script>
+
+      document.querySelector("#Controls").style.display = 'none';
+
+      function GameFullscreen() {
+        var iframe = document.getElementById("GameIframe");
+        if (iframe.requestFullscreen) {
+          iframe.requestFullscreen();
+        } else if (iframe.webkitRequestFullscreen) {
+          iframe.webkitRequestFullscreen();
+        } else if (iframe.msRequestFullscreen) {
+          iframe.msRequestFullscreen();
+        }
+      }
+
+      function Controls() {
+        var controls = document.querySelector("#Controls");
+        if (window.getComputedStyle(controls).display === 'block') {
+          controls.style.display = 'none';
+        } else {
+          controls.style.display = 'block';
+        }
+      }
+    </script>
+
+
+
+    <footer style="background-color: #181818;
+  padding: 10px;
+  text-align: center;
+  color: white;">
+
+      <a href="https://discord.gg/5YjyZnraZz"><img src="../assets/discord-favicon-white-outline.png" alt="discord logo"
+          width="35"></img></a>
+
+      <a href="https://www.tiktok.com/@villocity.mtg"><img src="../assets/tiktok-favicon-white-outline.png"
+          alt="tiktok logo" width="30"></img></a>
+
+      <a href="#"><img src="../assets/gmail-favicon-white-outline.png" alt="gmail logo" width="30"></img></a>
+
+    </footer>
+
+
+
+
+</body>
+
+</html>
