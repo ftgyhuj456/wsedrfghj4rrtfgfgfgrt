@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="icon" href="assets/obsidians-unblocked-favicon-white.png" type="image/x-icon">
+  <link rel="icon" href="../assets/obsidians-unblocked-favicon-white.png" type="image/x-icon">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>Home | Obsidians Unblocked</title>
@@ -15,12 +15,12 @@
 <body class="homepage" onload="initiateAudioCheck()">
 
   <audio id="audioSource" loop preload="auto">
-    <source src="assets/wutiwant.mp3?v=1" type="audio/mpeg">
+    <source src="../assets/wutiwant.mp3?v=1" type="audio/mpeg">
     Your browser does not support the audio element.
   </audio>
   
   <div class="ObsidiansUnblockedHeader" id="Logo" style="text-align: center;">
-    <img src="assets/obsidians-unblocked-high-resolution-logo-transparent.png" style="scale: 35%;">
+    <img src="../assets/obsidians-unblocked-high-resolution-logo-transparent.png" style="scale: 35%;">
   </div>
 
   <div id="ButtonsContainer">
@@ -36,10 +36,10 @@
   </div>
 
   <div class="footer-main" id="regular-footer">
-    <a href="https://discord.gg/8D8mVEE2v4"><img src="assets/discord-favicon-white-outline.png" alt="discord logo" width="35"></a>
-    <a href="https://www.tiktok.com/@villocity.mtg"><img src="assets/tiktok-favicon-white-outline.png" alt="tiktok logo" width="30"></a>
-    <a href="mailto:segamega311@gmail.com"><img src="assets/gmail-favicon-white-outline.png" alt="gmail logo" width="30"></a>
-    <a onclick="toggleParticleColors()"><img src="assets/particle.png" alt="particle icon" width="30" id="particleColorToggleButton"></a>
+    <a href="https://discord.gg/8D8mVEE2v4"><img src="../assets/discord-favicon-white-outline.png" alt="discord logo" width="35"></a>
+    <a href="https://www.tiktok.com/@villocity.mtg"><img src="../assets/tiktok-favicon-white-outline.png" alt="tiktok logo" width="30"></a>
+    <a href="mailto:segamega311@gmail.com"><img src="../assets/gmail-favicon-white-outline.png" alt="gmail logo" width="30"></a>
+    <a onclick="toggleParticleColors()"><img src="../assets/particle.png" alt="particle icon" width="30" id="particleColorToggleButton"></a>
   </div>
 
   <!-- Centering container for the popup -->
@@ -48,7 +48,7 @@
       <strong>
         Version 2.0.0
         Changelog 9/11/24
-        <button type="button" onClick="hideChangelog()" style="margin-left: 30%; background-color: #0e0e0e; border-style:none;"><img src="assets/x-icon.png" width="30"></button>
+        <button type="button" onClick="hideChangelog()" style="margin-left: 30%; background-color: #0e0e0e; border-style:none;"><img src="../assets/x-icon.png" width="30"></button>
       </strong>
       <p>-------------------------------------------------------------------------------------</p>
       <strong>Added:</strong>
@@ -83,16 +83,16 @@
       <div class="menu-bar-icons">
         
         <a href="https://discord.gg/8D8mVEE2v4">
-          <img src="assets/discord-favicon-white-outline.png" alt="Discord logo" width="35">
+          <img src="../assets/discord-favicon-white-outline.png" alt="Discord logo" width="35">
         </a>
         <a href="https://www.tiktok.com/@villocity.mtg">
-          <img src="assets/tiktok-favicon-white-outline.png" alt="Tiktok logo" width="30">
+          <img src="../assets/tiktok-favicon-white-outline.png" alt="Tiktok logo" width="30">
         </a>
         <a href="mailto:segamega311@gmail.com">
-          <img src="assets/gmail-favicon-white-outline.png" alt="Gmail logo" width="30">
+          <img src="../assets/gmail-favicon-white-outline.png" alt="Gmail logo" width="30">
         </a>
         <a onclick="toggleParticleColors()">
-          <img src="assets/particle.png" alt="Particle icon" width="30" id="particleColorToggleButton2">
+          <img src="../assets/particle.png" alt="Particle icon" width="30" id="particleColorToggleButton2">
         </a>
       </div>
     </div>
@@ -166,42 +166,42 @@
     const gamesData = [
       {
         name: "Super Mario 64",
-        img: "assets/sm64.webp",
+        img: "../assets/sm64.webp",
         url: "games/sm64/", // Replace with actual game URL
       },
       {
         name: "Slope",
-        img: "assets/slope.png",
+        img: "../assets/slope.png",
         url: "games/slope/", // Replace with actual game URL
       },
       {
         name: "1v1.lol",
-        img: "assets/1v1lol.avif",
+        img: "../assets/1v1lol.avif",
         url: "games/1v1lol/", // Replace with actual game URL
       },
       {
         name: "Bitlife",
-        img: "assets/bitlife.jpg",
+        img: "../assets/bitlife.jpg",
         url: "games/bitlife/", // Replace with actual game URL
       },
       {
         name: "Super Mario 64",
-        img: "assets/sm64.webp",
+        img: "../assets/sm64.webp",
         url: "games/sm64/", // Replace with actual game URL
       },
       {
         name: "Slope",
-        img: "assets/slope.png",
+        img: "../assets/slope.png",
         url: "games/slope/", // Replace with actual game URL
       },
       {
         name: "1v1.lol",
-        img: "assets/1v1lol.avif",
+        img: "../assets/1v1lol.avif",
         url: "games/1v1lol/", // Replace with actual game URL
       },
       {
         name: "Bitlife",
-        img: "assets/bitlife.jpg",
+        img: "../assets/bitlife.jpg",
         url: "games/bitlife/", // Replace with actual game URL
       },
       // Add more games as needed
@@ -345,7 +345,7 @@ let alreadyFixed = false;
       scene.remove(particleSystem);
       particleSystem = new THREE.Points(particles, isColored ? coloredMaterial : whiteMaterial);
       scene.add(particleSystem);
-      const imageSrc = isColored ? "assets/particle-colored.png" : "assets/particle.png";
+      const imageSrc = isColored ? "../assets/particle-colored.png" : "../assets/particle.png";
       document.getElementById("particleColorToggleButton").src = imageSrc;
       document.getElementById("particleColorToggleButton2").src = imageSrc;
     }
