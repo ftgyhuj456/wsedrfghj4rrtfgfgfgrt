@@ -103,6 +103,67 @@
     <!-- Dynamically loaded games will appear here -->
   </div>
 
+  <!-- GAME DISPLAY -->
+<div class="game-display-container" id="game-display-container" style="flex-direction:column; background-color:black;width: 800px; border-style: inset; border-color: white; border-radius: 20px; border-width: 3px; display: flex; justify-content: center; align-items: center; margin: 0 auto; padding: 15px; ">
+  <div class="game-display" id="game-display" style="display: flex;">
+      <iframe width="700px" height="500px" style="border-radius: 20px; border: none;" src="" id="game-display-iframe"></iframe>
+  </div>
+  <div style="display: flex; justify-content: center; align-items: center; margin: 0 auto; ">
+  <a onclick="ExitGame()" style="padding-right: 1200%;"><img src="../assets/back-arrow.png" width="30"></a>
+  <a onclick="FullscreenGame()" style="padding-left: 95%;"><img src="../assets/fullscreen.png" width="25"></a>
+  </div>
+</div>
+
+
+<script>
+  //GAME DISPLAY HANDLING
+  let playingGame = false;
+  if (playingGame) {
+  document.getElementById("MenuBarContainer").style.display = 'none';
+	document.getElementById("regular-footer").style.display = 'none';
+	document.getElementById("ButtonsContainer").style.display = 'none';
+	document.getElementById("GamesContainer").style.display = 'none';
+  document.getElementById("MenuBarContainer").style.display = 'none';
+	//document.getElementById("Logo").style.display = 'none';
+  } else {
+    document.getElementById("game-display-container").style.display = 'none';
+  }
+
+  function LoadGame(url) {
+    document.getElementById("MenuBarContainer").style.display = 'none';
+	  document.getElementById("regular-footer").style.display = 'none';
+	  document.getElementById("ButtonsContainer").style.display = 'none';
+	  document.getElementById("GamesContainer").style.display = 'none';
+    document.getElementById("MenuBarContainer").style.display = 'none';
+    document.getElementById("game-display-container").style.display = 'flex';
+    document.getElementById("game-display-iframe").src = url;
+    document.getElementById("audioSource").volume = 0;
+  }
+
+  function ExitGame() {
+    document.getElementById("MenuBarContainer").style.display = 'flex';
+		document.getElementById("regular-footer").style.display = 'none';
+		document.getElementById("ButtonsContainer").style.display = 'none';
+		document.getElementById("GamesContainer").style.display = 'flex';
+    document.getElementById("game-display-container").style.display = 'none';
+    document.getElementById("audioSource").volume = 1;
+  }
+
+  function FullscreenGame() {
+    const iframe = document.getElementById("game-display-iframe");
+    if (iframe.requestFullscreen) {
+      iframe.requestFullscreen();
+    } else if (iframe.mozRequestFullScreen) { // Firefox
+      iframe.mozRequestFullScreen();
+    } else if (iframe.webkitRequestFullscreen) { // Chrome, Safari and Opera
+      iframe.webkitRequestFullscreen();
+    } else if (iframe.msRequestFullscreen) { // IE/Edge
+      iframe.msRequestFullscreen();
+    }
+  }
+</script>
+
+
   <script>
     let audioPlayed = false; // Flag to check if the audio has already played
 
@@ -167,12 +228,12 @@
       {
         name: "Super Mario 64",
         img: "../assets/sm64.webp",
-        url: "games/sm64/", // Replace with actual game URL
+        url: "games/sm64/emulator-sm64.html", // Replace with actual game URL
       },
       {
         name: "Slope",
         img: "../assets/slope.png",
-        url: "games/slope/", // Replace with actual game URL
+        url: "games/slope/slope.html", // Replace with actual game URL
       },
       {
         name: "1v1.lol",
@@ -223,7 +284,7 @@
       <img src="${game.img}" width="200px" height="200px">
       <p><strong>${game.name}</strong></p>
     `;
-    gameButton.onclick = () => window.location.href = game.url; // Redirect to game URL
+    gameButton.onclick = function() { LoadGame(game.url); }; // Redirect to game URL
 
     if (collumns === 0 || collumns === 4) {
       if (collumns === 4) collumns = 0; // Reset columns after 4th item
