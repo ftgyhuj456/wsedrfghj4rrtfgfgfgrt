@@ -1,268 +1,167 @@
-<!--
-    Hit RUN to see this project in action!
-
-    This project will auto-refresh as you edit the HTML, CSS and JS. See README.md for more info (including how to disable auto-refresh and install packages).
-  -->
-
-<!DOCTYPE html>
 <html>
-
 <head>
+        
+        <script>
+          
+          
+          
 
-  <link rel="icon" href="../../assets/obsidians-unblocked-favicon-white.png" type="image/x-icon">
+          
+        </script>
 
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>Cookie Clicker | Obsidians Ublocked</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
+<title>Cookie Clicker | Seraph</title>
+   
+<!--
+Code and graphics copyright Orteil, 2013-2020
+Feel free to alter this code to your liking, but please do not re-host it, do not profit from it and do not present it as your own.
+-->
 
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
-  <link href='https://fonts.googleapis.com/css?family=Alfa Slab One' rel='stylesheet'>
-
-  <style>
-    body {
-      background-color: #1f1f1f;
-      color: #ffffff;
-      font-family: Arial, sans-serif;
-      overflow-x: hidden;
-    }
-
-    li {
-      float: right;
-    }
-
-    .GameImg:hover {
-      filter: brightness(80%);
-    }
-
-    .OptionsButton:hover {
-      filter: brightness(80%);
-    }
-  </style>
-
+<meta name="viewport" content="width=900, initial-scale=1">
+<link rel="shortcut icon" href="../../images/ico.ico" type="image/x-icon">
+<script src="../../storage/js/cloak.js"></script>
+<link href='https://fonts.googleapis.com/css?family=Merriweather:900&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+<script src="base64.js"></script>
+<script src="main.js"></script>
+<link href="style.css" rel="stylesheet" type="text/css">
 </head>
-
 <body>
-  <nav class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <img class="navbar-brand" href="#" src="../../assets/obsidians-unblocked-high-resolution-logo-transparent.png"
-          style="background-color: black;"><img>
-      </div>
-      <ul class="nav navbar-nav" style="background-color: rgb(20, 20, 20);">
-        <li><a href="../../">Home</a></li>
-        <li><a class="active" href="/games/">Games</a></li>
-        <li><a class="active" href="../../info/index.html">Info</a></li>
-        <li><a class="active" href="../../changes/index.html">Changelog</a></li>
-        <li><a class="active" href="../../bypass/index.html">Bypass</a></li>
-      </ul>
-    </div>
-  </nav>
 
+<div id="wrapper">
 
-  <div class="ObsidiansUnblockedHeader" id="Logo" style="margin-left: -16%;">
-    <br>
-    <center>
-      <img src="../../assets/obsidians-unblocked-high-resolution-logo-transparent.png" style="scale: 25%; "></img>
-    </center>
-  </div>
+	<div id="topBar">
+		<div><b>Cookie Clicker</b>&trade; &copy; <a href="//orteil.dashnet.org" target="_blank" id="topbarOrteil">Orteil</a>, 2020 - <a href="//dashnet.org" target="_blank" id="topbarDashnet">DashNet</a></div>
+		<div><a href="https://twitter.com/orteil42" target="_blank" id="topbarTwitter">twitter</a></div>
+		<div><a href="https://orteil42.tumblr.com" target="_blank" id="topbarTumblr">tumblr</a></div>
+		<div style="position:relative;"><div style="width:22px;height:32px;background:url(img/discord.png);position:absolute;left:0px;top:0px;pointer-events:none;"></div><a href="https://discordapp.com/invite/cookie" target="_blank" style="padding-left:16px;" id="topbarDiscord">Discord</a></div>
+		<div style="position:relative;"><div style="width:25px;height:32px;background:url(img/weeHoodie.png);position:absolute;left:-2px;top:0px;pointer-events:none;"></div><a class="blueLink" href="http://www.redbubble.com/people/dashnet" target="_blank" style="padding-left:12px;" id="topbarMerch">Merch!</a></div>
+		<div style="position:relative;"><div style="width:22px;height:32px;background:url(img/patreon.png);position:absolute;left:0px;top:0px;pointer-events:none;"></div><a class="orangeLink" href="https://www.patreon.com/dashnet" target="_blank" style="padding-left:16px;" id="topbarPatreon">Patreon</a></div>
+		<div style="position:relative;display:none;font-weight:bold;" id="heralds"><div style="position:absolute;top:-4px;width:31px;height:39px;background:url(img/heraldFlag.png);left:50%;margin-left:-15px;pointer-events:none;"></div><div id="heraldsAmount" style="position:relative;z-index:10;text-shadow:0px 1px 0px #000,0px 0px 6px #ff00e4;color:#fff;">-</div></div>
+		<div><a class="lightblueLink" style="font-weight:bold;" href="https://play.google.com/store/apps/details?id=org.dashnet.cookieclicker" target="_blank" id="topbarMobileCC">Cookie Clicker for Android</a></div>
+		<div><a href="//orteil.dashnet.org/randomgen/" target="_blank" id="topbarRandomgen">RandomGen</a></div>
+		<div><a href="//orteil.dashnet.org/igm/" target="_blank" id="topbarIGM">Idle Game Maker</a></div>
+		<div id="links" class="hoverer">
+			Other versions
+			<div class="hoverable">
+			<a href="../" target="_blank" id="linkVersionLive">Live version</a>
+			<a href="beta" target="_blank" id="linkVersionBeta">Try the beta!</a>
+			<a href="//orteil.dashnet.org/cookieclicker/v10466" target="_blank" id="linkVersionOld">v. 1.0466</a>
+			<a href="//orteil.dashnet.org/experiments/cookie/" target="_blank">Classic</a>
+			</div>
+		</div>
+	</div>
 
-  <script>
-    var isChromebook = /CrOS/.test(navigator.userAgent);
-    if (isChromebook) {
-      document.getElementById("Logo").style.marginLeft = "-24%";
-    } else {
-      document.getElementById("Logo").style.marginLeft = "-16%";
-    }
-  </script>
+	<div id="game">
+		<div id="javascriptError">
+			<div id="loader">
+				<div class="spinnyBig"></div>
+				<div class="spinnySmall"></div>
+				<div id="loading" class="title">Loading...</div>
+				<div id="failedToLoad" class="title">This is taking longer than expected.<br>
+				<div style="font-size:65%;line-height:120%;">Slow connection? If not, please make sure your javascript is enabled, then refresh.<br>
+				If problems persist, this might be on our side - wait a few minutes, then hit ctrl+f5!</div></div>
+				<div id="ifIE9" class="title" style="font-size:100%;line-height:120%;">Your browser may not be recent enough to run Cookie Clicker.<br>You might want to update, or switch to a more modern browser such as Chrome or Firefox.</div>
+				<!--<div class="title">Oops, looks like we've got a problem.</div>
+				<div>Please bear with us while we fix it.<br>Your save is safe, don't worry!</div>-->
+			</div>
+		</div>
 
-  <div class="GameTitle" id="GameTitle" style="margin-left: 0%;">
-    <h1>
-      <strong>
-        Cookie Clicker
-      </strong>
-    </h1>
-  </div>
+		<canvas id="backgroundCanvas"></canvas>
+		
+		<div id="goldenCookie" class="goldenCookie"></div>
+		<div id="seasonPopup" class="seasonPopup"></div>
+		<div id="shimmers"></div>
+		<div id="alert"></div>
+		<div id="particles"></div>
+		<div id="sparkles" class="sparkles"></div>
+		<div id="notes"></div>
+		<div id="darken"></div>
+		<div id="toggleBox" class="framed prompt"></div>
+		<div id="promptAnchor"><div id="prompt" class="framed"><div id="promptContent"></div><div class="close" onclick="PlaySound('snd/tick.mp3');Game.ClosePrompt();">x</div></div></div>
+		<div id="versionNumber" class="title"></div>
+		<div id="ascend">
+			<div id="ascendBG"></div>
+			<div id="ascendZoomable"><div id="ascendContent"><div id="ascendUpgrades" style="position:absolute;"></div></div></div>
+			<div id="ascendOverlay"></div>
+		</div>
+		
+		<div id="debug"><div id="devConsole" class="framed"></div><div id="debugLog"></div></div>
+		
+		<div id="sectionLeft" class="inset">
+			<canvas id="backgroundLeftCanvas" style="z-index:5;"></canvas>
+			<div class="blackFiller"></div>
+			<div class="blackGradient"></div>
+			<div id="sectionLeftInfo"></div>
+			<div id="cookies" class="title"></div>
+			<div id="bakeryNameAnchor"><div id="bakeryName" class="title"></div></div>
+			<div id="specialPopup" class="framed prompt offScreen"></div>
+			<div id="buffs" class="crateBox"></div>
+			<div id="cookieAnchor">
+				<div id="bigCookie"></div>
+				<div id="cookieNumbers"></div>
+			</div>
+			<div id="sectionLeftExtra"></div>
+		</div>
 
-  <div class="GameWindow" id="GameWindow">
-    <iframe src="cookie-clicker-master/cookieclicker.html" id="GameIframe" width="850" height="500" style="
-        border-radius: 15px;
-        border: 5px solid #ff4057;
-        padding-bottom: 40px;
-      "> </iframe>
-  </div>
+		<div class="separatorLeft"></div>
+		<div class="separatorRight"></div>
 
-  <div style="max-width: 56%;">
+		<div id="sectionMiddle" class="inset">
+			<div id="comments" class="inset title">
+				<div id="prefsButton" class="button">Options</div>
+				<div id="statsButton" class="button">Stats</div>
+				<div id="logButton" class="button"><div id="checkForUpdate">New update!</div>Info</div>
+				<div id="legacyButton" class="button">Legacy<div id="ascendMeterContainer" class="smallFramed meterContainer"><div id="ascendMeter" class="meter filling"></div></div><div class="roundedPanel" id="ascendNumber"></div><div id="ascendTooltip" class="framed"></div></div>
+				<div id="commentsTextBelow" class="commentsText"></div>
+				<div id="commentsText" class="commentsText"></div>
+				<div class="separatorBottom"></div>
+			</div>
+			<div id="centerArea">
+				<div id="buildingsTitle" class="inset title zoneTitle">Buildings</div>
+				<div id="buildingsMaster"></div>
+				<div id="rows"></div>
+				<div id="menu"></div>
+				<!--
+				<div id="donateBox">
+					<form target="_blank" action="https://www.paypal.com/cgi-bin/webscr" method="post" id="donate" style="margin:0px 16px;">
+					<input type="hidden" name="cmd" value="_s-xclick">
+					<input type="hidden" name="hosted_button_id" value="BBN2WL3TC6QH4">
+					<input type="image" src="https://www.paypalobjects.com/en_GB/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal — The safer, easier way to pay online.">
+					<img alt="" border="0" src="https://www.paypalobjects.com/nl_NL/i/scr/pixel.gif" width="1" height="1">
+					</form>
+					<small>Help us keep developing the game!</small>
+				</div>
+				-->
+			</div>
+		</div>
 
-    <button style="border: none; background-color: #202020;" onclick="GameFullscreen()">
-      <img src="../../assets/fullscreen.png"
-        style="scale: 10%; background-color: #202020; position: absolute; left: 710px; top: 790px;"
-        class="OptionsButton">
-    </button>
+		<div id="sectionRight" class="inset">
+			<div id="store">
+				<div id="storeTitle" class="inset title zoneTitle">Store</div>
+				<div id="toggleUpgrades" class="storeSection upgradeBox"></div>
+				<div id="techUpgrades" class="storeSection upgradeBox"></div>
+				<div id="vaultUpgrades" class="storeSection upgradeBox"></div>
+				<div id="upgrades" class="storeSection upgradeBox"></div>
+				<div id="products" class="storeSection"></div>
+			</div>
+		</div>
+		
+		<div id="focusButtons">
+			<div id="focusLeft" class="title">Cookie</div>
+			<div id="focusMiddle" class="title" style="font-size:80%;padding-top:18px;padding-bottom:14px;">Buildings</div>
+			<div id="focusRight" class="title">Store</div>
+			<div id="focusMenu" class="title">Menu</div>
+		</div>
+		<div id="compactOverlay" class="title">
+			<div id="compactCommentsText" class="commentsText"></div>
+			<div id="compactCookies"></div>
+			<div class="separatorBottom"></div>
+		</div>
+		
+		<div id="tooltipAnchor"><div id="tooltip" class="framed" onMouseOut="Game.tooltip.hide();"></div></div>
 
-  </div>
-  <div class="GameInfo" id="GameInfo" style="font-size: 15px; max-width: 700px;">
-    <p>
-      <strong>
-        Cookie Clicker is an addictive incremental game where players start with a simple task: clicking a giant cookie
-        to produce more cookies. As you accumulate cookies, you can unlock upgrades, hire helpers, and delve into the
-        world of cookie-based entrepreneurship. The goal is simple - click, collect, and watch your cookie empire grow
-        in this delightful and strangely satisfying game.
-      </strong>
-    </p>
-  </div>
-  <br>
-  <div class="GameCredits" id="GameCredits" style="font-size: 15px; max-width: 700px; background-color: black;">
-    <p>
-      <strong>
-        Game Credits:
-      </strong>
-      <br>
-      Orteil (Julien Thiennot)
-    </p>
-  </div>
+	</div>
 
-
-  <div class="OtherGames" id="OtherGames"
-    style="background-color: #202020; position: absolute; margin-left: 83%; margin-top: -56%;">
-
-    <h1>
-      <strong>
-        Other Games
-      </strong>
-    </h1>
-
-    <button type="button" class="GameButton" onclick="" style="background-color: #202020; border: none;"><img
-        class="GameImg" src="../../assets/slope.png" width="250" height="150" style="border-radius: 15px;
-      border: 5px solid #ff4057;
-      padding: 0px;
-      "></img></button>
-
-    <br>
-
-    <button type="button" class="GameButton" onclick="" style="background-color: #202020; border: none;"><img
-        class="GameImg" src="../../assets/ducklife.webp" width="250" height="150" style="border-radius: 15px;
-      border: 5px solid #ff4057;
-      padding: 0px;
-      "></img></button>
-
-    <br>
-
-    <button type="button" class="GameButton" onclick="" style="background-color: #202020; border: none;"><img
-        class="GameImg" src="../../assets/gunmayhem.avif" width="250" height="150" style="border-radius: 15px;
-      border: 5px solid #ff4057;
-      padding: 0px;
-      "></img></button>
-
-    <br>
-
-    <button type="button" class="GameButton" onclick="" style="background-color: #202020; border: none;"><img
-        class="GameImg" src="../../assets/snake.jpg" width="250" height="150" style="border-radius: 15px;
-      border: 5px solid #ff4057;
-      padding: 0px;
-      "></img></button>
-
-
-  </div>
-
-
-  <div class="Controls" id="Controls"
-    style="background-color: black; max-width: 250px; max-height: 500; position: absolute; top: 500px; left: 850px;">
-
-    <h1>
-      <strong>
-        <center>
-          Controls:
-        </center>
-      </strong>
-    </h1>
-    <br>
-    <center>
-      <p>Forward: Keybind</p><br>
-      <p>Backward: Keybind</p><br>
-      <p>Left: Keybind</p><br>
-      <p>Right: Keybind</p><br>
-      <p>Jump: Keybind</p><br>
-    </center>
-  </div>
-
-
-  <br>
-
-  <script>
-
-    document.querySelector("#Controls").style.display = 'none';
-
-    function GameFullscreen() {
-      var iframe = document.getElementById("GameIframe");
-      if (iframe.requestFullscreen) {
-        iframe.requestFullscreen();
-      } else if (iframe.webkitRequestFullscreen) {
-        iframe.webkitRequestFullscreen();
-      } else if (iframe.msRequestFullscreen) {
-        iframe.msRequestFullscreen();
-      }
-    }
-
-    function Controls() {
-      var controls = document.querySelector("#Controls");
-      if (window.getComputedStyle(controls).display === 'block') {
-        controls.style.display = 'none';
-      } else {
-        controls.style.display = 'block';
-      }
-    }
-  </script>
-
-
-
-  <!--EMULATOR JS STUFF-->
-  <script type='text/javascript'>
-    EJS_player = '#GameIframe';
-
-    // Can also be fceumm or nestopia
-    EJS_core = 'n64';
-
-    // Lightgun
-    EJS_lightgun = false; // can be true or false
-
-    // URL to BIOS file
-    EJS_biosUrl = ''; // example: https://dl.dropboxusercontent.com/s/[random-code]/bios.bin
-
-    // URL to Game rom
-    EJS_gameUrl = 'sm64.z64'; // example: https://dl.dropboxusercontent.com/s/[random-code]/mario.nes
-
-    // Path to the data directory
-    EJS_pathtodata = '../../EmulatorJS-main/data/';
-  </script>
-  <script src='data/loader.js'></script>
-
-  <!--RUFFLE STUFF-->
-  <script src="../../ruffle-nightly-2023_11_14-web-selfhosted/ruffle.js"></script>
-
-  <footer style="background-color: #181818;
-    padding: 10px;
-    text-align: center;
-    color: white;">
-
-    <a href="https://discord.gg/5YjyZnraZz"><img src="../../assets/discord-favicon-white-outline.png" alt="discord logo"
-        width="35"></img></a>
-
-    <a href="https://www.tiktok.com/@villocity.mtg"><img src="../../assets/tiktok-favicon-white-outline.png"
-        alt="tiktok logo" width="30"></img></a>
-
-    <a href="#"><img src="../../assets/gmail-favicon-white-outline.png" alt="gmail logo" width="30"></img></a>
-
-  </footer>
-
-
-
+</div>
 
 </body>
-
 </html>

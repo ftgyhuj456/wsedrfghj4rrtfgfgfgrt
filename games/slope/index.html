@@ -1,271 +1,39 @@
-<!--
-    Hit RUN to see this project in action!
-
-    This project will auto-refresh as you edit the HTML, CSS and JS. See README.md for more info (including how to disable auto-refresh and install packages).
-  -->
-
-<!DOCTYPE html>
 <html>
+    <head>
+        
+        <script>
+          
+          
+          
 
-<head>
+          
+        </script>
 
-  <link rel="icon" href="../../assets/obsidians-unblocked-favicon-white.png" type="image/x-icon">
+        <title>Slope | Seraph</title>
 
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>Slope | Obsidians Ublocked</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
-
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
-  <link href='https://fonts.googleapis.com/css?family=Alfa Slab One' rel='stylesheet'>
-
-  <style>
-    body {
-      background-color: #1f1f1f;
-      color: #ffffff;
-      font-family: Arial, sans-serif;
-      overflow-x: hidden;
-    }
-
-    li {
-      float: right;
-    }
-
-    .GameImg:hover {
-      filter: brightness(80%);
-    }
-
-    .OptionsButton:hover {
-      filter: brightness(80%);
-    }
-  </style>
-
-</head>
-
-<body>
-  <nav class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <img class="navbar-brand" href="#" src="../../assets/obsidians-unblocked-high-resolution-logo-transparent.png"
-          style="background-color: black;"><img>
-      </div>
-      <ul class="nav navbar-nav" style="background-color: rgb(20, 20, 20);">
-        <li><a href="../../">Home</a></li>
-        <li><a class="active" href="/games/">Games</a></li>
-        <li><a class="active" href="../../info/index.html">Info</a></li>
-        <li><a class="active" href="../../changes/index.html">Changelog</a></li>
-        <li><a class="active" href="../../bypass/index.html">Bypass</a></li>
-      </ul>
-    </div>
-  </nav>
-
-
-  <div class="ObsidiansUnblockedHeader" id="Logo" style="margin-left: -16%;">
-    <br>
-    <center>
-      <img src="../../assets/obsidians-unblocked-high-resolution-logo-transparent.png" style="scale: 25%; "></img>
-    </center>
-  </div>
-
-  <script>
-    var isChromebook = /CrOS/.test(navigator.userAgent);
-    if (isChromebook) {
-      document.getElementById("Logo").style.marginLeft = "-24%";
-    } else {
-      document.getElementById("Logo").style.marginLeft = "-16%";
-    }
-  </script>
-
-  <div class="GameTitle" id="GameTitle" style="margin-left: 0%;">
-    <h1>
-      <strong>
-        Slope
-      </strong>
-    </h1>
-  </div>
-
-  <div class="GameWindow" id="GameWindow">
-    <iframe src="slope.html" id="GameIframe" width="850" height="500" style="
-        border-radius: 15px;
-        border: 5px solid #ff4057;
-        padding-bottom: 40px;
-      "> </iframe>
-  </div>
-
-  <div style="max-width: 56%;">
-
-    <button style="border: none; background-color: #202020;" onclick="GameFullscreen()">
-      <img src="../../assets/fullscreen.png"
-        style="scale: 10%; background-color: #202020; position: absolute; left: 710px; top: 790px;"
-        class="OptionsButton">
-    </button>
-
-  </div>
-  <div class="GameInfo" id="GameInfo" style="font-size: 15px; max-width: 700px;">
-    <p>
-      <strong>
-        "Slope" is a thrilling and fast-paced online game where players control a rolling ball on a futuristic,
-        neon-colored track. The objective is to navigate the ball through a twisting and turning slope while avoiding
-        obstacles and gaps. The game tests players' reflexes and precision as they tilt and guide the ball to maintain
-        momentum and avoid falling off the edge. With its simple yet challenging gameplay and vibrant graphics, "Slope"
-        provides an engaging experience that encourages players to master the art of balance and agility in a dynamic
-        and visually striking environment.
-      </strong>
-    </p>
-  </div>
-  <br>
-  <div class="GameCredits" id="GameCredits" style="font-size: 15px; max-width: 700px; background-color: black;">
-    <p>
-      <strong>
-        Game Credits:
-      </strong>
-      <br>
-      RobKayS
-      <br>
-      @BigFoot9999 on github
-    </p>
-  </div>
-
-
-  <div class="OtherGames" id="OtherGames"
-    style="background-color: #202020; position: absolute; margin-left: 83%; margin-top: -56%;">
-
-    <h1>
-      <strong>
-        Other Games
-      </strong>
-    </h1>
-
-    <button type="button" class="GameButton" onclick="" style="background-color: #202020; border: none;"><img
-        class="GameImg" src="../../assets/slope.png" width="250" height="150" style="border-radius: 15px;
-      border: 5px solid #ff4057;
-      padding: 0px;
-      "></img></button>
-
-    <br>
-
-    <button type="button" class="GameButton" onclick="" style="background-color: #202020; border: none;"><img
-        class="GameImg" src="../../assets/ducklife.webp" width="250" height="150" style="border-radius: 15px;
-      border: 5px solid #ff4057;
-      padding: 0px;
-      "></img></button>
-
-    <br>
-
-    <button type="button" class="GameButton" onclick="" style="background-color: #202020; border: none;"><img
-        class="GameImg" src="../../assets/gunmayhem.avif" width="250" height="150" style="border-radius: 15px;
-      border: 5px solid #ff4057;
-      padding: 0px;
-      "></img></button>
-
-    <br>
-
-    <button type="button" class="GameButton" onclick="" style="background-color: #202020; border: none;"><img
-        class="GameImg" src="../../assets/snake.jpg" width="250" height="150" style="border-radius: 15px;
-      border: 5px solid #ff4057;
-      padding: 0px;
-      "></img></button>
-
-
-  </div>
-
-
-  <div class="Controls" id="Controls"
-    style="background-color: black; max-width: 250px; max-height: 500; position: absolute; top: 500px; left: 850px;">
-
-    <h1>
-      <strong>
-        <center>
-          Controls:
-        </center>
-      </strong>
-    </h1>
-    <br>
-    <center>
-      <p>Forward: Keybind</p><br>
-      <p>Backward: Keybind</p><br>
-      <p>Left: Keybind</p><br>
-      <p>Right: Keybind</p><br>
-      <p>Jump: Keybind</p><br>
-    </center>
-  </div>
-
-
-  <br>
-
-  <script>
-
-    document.querySelector("#Controls").style.display = 'none';
-
-    function GameFullscreen() {
-      var iframe = document.getElementById("GameIframe");
-      if (iframe.requestFullscreen) {
-        iframe.requestFullscreen();
-      } else if (iframe.webkitRequestFullscreen) {
-        iframe.webkitRequestFullscreen();
-      } else if (iframe.msRequestFullscreen) {
-        iframe.msRequestFullscreen();
-      }
-    }
-
-    function Controls() {
-      var controls = document.querySelector("#Controls");
-      if (window.getComputedStyle(controls).display === 'block') {
-        controls.style.display = 'none';
-      } else {
-        controls.style.display = 'block';
-      }
-    }
-  </script>
-
-
-
-  <!--EMULATOR JS STUFF-->
-  <script type='text/javascript'>
-    EJS_player = '#GameIframe';
-
-    // Can also be fceumm or nestopia
-    EJS_core = 'n64';
-
-    // Lightgun
-    EJS_lightgun = false; // can be true or false
-
-    // URL to BIOS file
-    EJS_biosUrl = ''; // example: https://dl.dropboxusercontent.com/s/[random-code]/bios.bin
-
-    // URL to Game rom
-    EJS_gameUrl = 'sm64.z64'; // example: https://dl.dropboxusercontent.com/s/[random-code]/mario.nes
-
-    // Path to the data directory
-    EJS_pathtodata = '../../EmulatorJS-main/data/';
-  </script>
-  <script src='data/loader.js'></script>
-
-
-
-  <footer style="background-color: #181818;
-    padding: 10px;
-    text-align: center;
-    color: white;">
-
-    <a href="https://discord.gg/5YjyZnraZz"><img src="../../assets/discord-favicon-white-outline.png" alt="discord logo"
-        width="35"></img></a>
-
-    <a href="https://www.tiktok.com/@villocity.mtg"><img src="../../assets/tiktok-favicon-white-outline.png"
-        alt="tiktok logo" width="30"></img></a>
-
-    <a href="#"><img src="../../assets/gmail-favicon-white-outline.png" alt="gmail logo" width="30"></img></a>
-
-  </footer>
-
-
-
-
-</body>
-
+        <meta http-equiv="X-Frame-Options" content="deny">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+        <script src="UnityProgress.js"></script>
+        <script src="UnityLoader.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script>
+            var unityInstance = window.unityInstance = UnityLoader.instantiate("gameContainer", "slope_new.json", {onProgress: UnityProgress,Module:{onRuntimeInitialized: function() {UnityProgress(window.unityInstance, "complete")}}});
+        </script>
+        <link rel="shortcut icon" href="../../images/ico.ico" type="image/x-icon">
+        <script src="../../storage/js/cloak.js"></script>
+    </head>
+    <body>
+        <div class="webgl-content">
+            <div id="gameContainer" style="width: 100%; height: 100%; margin: auto;"></div>
+                <div style="position: absolute; bottom: 1vh; left: 1vw;" class="fullscreen" onclick="window.unityInstance.SetFullscreen(1)">
+                  <div class="btn-group" role="group" aria-label="Third group">
+                  <button type="button" class="btn btn-info"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-fullscreen" viewBox="0 0 16 16">
+                <path d="M1.5 1a.5.5 0 0 0-.5.5v4a.5.5 0 0 1-1 0v-4A1.5 1.5 0 0 1 1.5 0h4a.5.5 0 0 1 0 1h-4zM10 .5a.5.5 0 0 1 .5-.5h4A1.5 1.5 0 0 1 16 1.5v4a.5.5 0 0 1-1 0v-4a.5.5 0 0 0-.5-.5h-4a.5.5 0 0 1-.5-.5zM.5 10a.5.5 0 0 1 .5.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 1 0 1h-4A1.5 1.5 0 0 1 0 14.5v-4a.5.5 0 0 1 .5-.5zm15 0a.5.5 0 0 1 .5.5v4a1.5 1.5 0 0 1-1.5 1.5h-4a.5.5 0 0 1 0-1h4a.5.5 0 0 0 .5-.5v-4a.5.5 0 0 1 .5-.5z"/>
+              </svg></button>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+        <script src="script.js"></script>
+  </body>
 </html>

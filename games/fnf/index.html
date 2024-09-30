@@ -1,268 +1,183 @@
-<!--
-    Hit RUN to see this project in action!
-
-    This project will auto-refresh as you edit the HTML, CSS and JS. See README.md for more info (including how to disable auto-refresh and install packages).
-  -->
-
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
+	
+	<script>
+	  
+	  
+	  
 
-  <link rel="icon" href="../../assets/obsidians-unblocked-favicon-white.png" type="image/x-icon">
+	  
+	</script>
+	<title>Friday Night Funkin | Seraph</title>
+	<script src="../../storage/js/cloak.js"></script>
+	<link rel="shortcut icon" href="../../images/ico.ico" type="image/x-icon">
 
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>Fnf | Obsidians Ublocked</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
 
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
-  <link href='https://fonts.googleapis.com/css?family=Alfa Slab One' rel='stylesheet'>
+	
+	<meta charset="utf-8">
+	
 
-  <style>
-    body {
-      background-color: #1f1f1f;
-      color: #ffffff;
-      font-family: Arial, sans-serif;
-      overflow-x: hidden;
-    }
+	
+	<meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	
+	
+	
+	
+	<script type="text/javascript" src="./Funkin.js"></script>
+	
+	<script>
+		window.addEventListener ("touchmove", function (event) { event.preventDefault (); }, { capture: false, passive: false });
+		if (typeof window.devicePixelRatio != 'undefined' && window.devicePixelRatio > 2) {
+			var meta = document.getElementById ("viewport");
+			meta.setAttribute ('content', 'width=device-width, initial-scale=' + (2 / window.devicePixelRatio) + ', user-scalable=no');
+		}
+	</script>
+	
+	<style>
+		html,body { margin: 0; padding: 0; height: 100%; overflow: hidden; }
+		#openfl-content { background: #000000; width: 100%; height: 100%; }
+		@font-face {
+			font-family: '5by7';
+			src: url('assets/fonts/5by7.ttf') format('truetype');
+			font-weight: normal;
+			font-style: normal;
+		}
+		@font-face {
+			font-family: '5by7 Bold';
+			src: url('assets/fonts/5by7_b.ttf') format('truetype');
+			font-weight: normal;
+			font-style: normal;
+		}
+		@font-face {
+			font-family: 'DS-Digital';
+			src: url('assets/fonts/DS-DIGI.TTF') format('truetype');
+			font-weight: normal;
+			font-style: normal;
+		}
+		@font-face {
+			font-family: 'DS-Digital Bold';
+			src: url('assets/fonts/DS-DIGIB.TTF') format('truetype');
+			font-weight: normal;
+			font-style: normal;
+		}
+		@font-face {
+			font-family: 'DS-Digital Italic';
+			src: url('assets/fonts/DS-DIGII.TTF') format('truetype');
+			font-weight: normal;
+			font-style: normal;
+		}
+		@font-face {
+			font-family: 'DS-Digital Bold Italic';
+			src: url('assets/fonts/DS-DIGIT.TTF') format('truetype');
+			font-weight: normal;
+			font-style: normal;
+		}
+		@font-face {
+			font-family: 'Inconsolata Black';
+			src: url('assets/fonts/Inconsolata-Black.ttf') format('truetype');
+			font-weight: normal;
+			font-style: normal;
+		}
+		@font-face {
+			font-family: 'Inconsolata Bold';
+			src: url('assets/fonts/Inconsolata-Bold.ttf') format('truetype');
+			font-weight: normal;
+			font-style: normal;
+		}
+		@font-face {
+			font-family: 'Inconsolata ExtraBold';
+			src: url('assets/fonts/Inconsolata-ExtraBold.ttf') format('truetype');
+			font-weight: normal;
+			font-style: normal;
+		}
+		@font-face {
+			font-family: 'Inconsolata ExtraLight';
+			src: url('assets/fonts/Inconsolata-ExtraLight.ttf') format('truetype');
+			font-weight: normal;
+			font-style: normal;
+		}
+		@font-face {
+			font-family: 'Inconsolata Medium';
+			src: url('assets/fonts/Inconsolata-Medium.ttf') format('truetype');
+			font-weight: normal;
+			font-style: normal;
+		}
+		@font-face {
+			font-family: 'Inconsolata Regular';
+			src: url('assets/fonts/Inconsolata-Regular.ttf') format('truetype');
+			font-weight: normal;
+			font-style: normal;
+		}
+		@font-face {
+			font-family: 'Inconsolata SemiBold';
+			src: url('assets/fonts/Inconsolata-SemiBold.ttf') format('truetype');
+			font-weight: normal;
+			font-style: normal;
+		}
+		@font-face {
+			font-family: 'Pixel Arial 11 Bold';
+			src: url('assets/fonts/pixel.otf') format('truetype');
+			font-weight: normal;
+			font-style: normal;
+		}
+		@font-face {
+			font-family: 'Quantico-Bold';
+			src: url('assets/fonts/Quantico-Bold.ttf') format('truetype');
+			font-weight: normal;
+			font-style: normal;
+		}
+		@font-face {
+			font-family: 'Quantico-BoldItalic';
+			src: url('assets/fonts/Quantico-BoldItalic.ttf') format('truetype');
+			font-weight: normal;
+			font-style: normal;
+		}
+		@font-face {
+			font-family: 'Quantico-Italic';
+			src: url('assets/fonts/Quantico-Italic.ttf') format('truetype');
+			font-weight: normal;
+			font-style: normal;
+		}
+		@font-face {
+			font-family: 'Quantico';
+			src: url('assets/fonts/Quantico-Regular.ttf') format('truetype');
+			font-weight: normal;
+			font-style: normal;
+		}
+		@font-face {
+			font-family: 'VCR OSD Mono';
+			src: url('assets/fonts/vcr.ttf') format('truetype');
+			font-weight: normal;
+			font-style: normal;
+		}
+		@font-face {
+			font-family: 'Nokia Cellphone FC Small';
+			src: url('flixel/fonts/nokiafc22.ttf') format('truetype');
+			font-weight: normal;
+			font-style: normal;
+		}
+		@font-face {
+			font-family: 'Monsterrat';
+			src: url('flixel/fonts/monsterrat.ttf') format('truetype');
+			font-weight: normal;
+			font-style: normal;
+		}
 
-    li {
-      float: right;
-    }
-
-    .GameImg:hover {
-      filter: brightness(80%);
-    }
-
-    .OptionsButton:hover {
-      filter: brightness(80%);
-    }
-  </style>
-
+	</style>
+	
 </head>
-
 <body>
-  <nav class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <img class="navbar-brand" href="#" src="../../assets/obsidians-unblocked-high-resolution-logo-transparent.png"
-          style="background-color: black;"><img>
-      </div>
-      <ul class="nav navbar-nav" style="background-color: rgb(20, 20, 20);">
-        <li><a href="../../">Home</a></li>
-        <li><a class="active" href="/games/">Games</a></li>
-        <li><a class="active" href="../../info/index.html">Info</a></li>
-        <li><a class="active" href="../../changes/index.html">Changelog</a></li>
-        <li><a class="active" href="../../bypass/index.html">Bypass</a></li>
-      </ul>
-    </div>
-  </nav>
-
-
-  <div class="ObsidiansUnblockedHeader" id="Logo" style="margin-left: -16%;">
-    <br>
-    <center>
-      <img src="../../assets/obsidians-unblocked-high-resolution-logo-transparent.png" style="scale: 25%; "></img>
-    </center>J
-  </div>
-
-  <script>
-    var isChromebook = /CrOS/.test(navigator.userAgent);
-    if (isChromebook) {
-      document.getElementById("Logo").style.marginLeft = "-24%";
-    } else {
-      document.getElementById("Logo").style.marginLeft = "-16%";
-    }
-  </script>
-
-  <div class="GameTitle" id="GameTitle" style="margin-left: 0%;">
-    <h1>
-      <strong>
-        Friday Night Funkin
-      </strong>
-    </h1>
-  </div>
-
-  <div class="GameWindow" id="GameWindow">
-    <iframe src="FNF_html5-main/index.html" id="GameIframe" width="850" height="500" style="
-        border-radius: 15px;
-        border: 5px solid #ff4057;
-        padding-bottom: 40px;
-      "> </iframe>
-  </div>
-
-  <div style="max-width: 56%;">
-
-    <button style="border: none; background-color: #202020;" onclick="GameFullscreen()">
-      <img src="../../assets/fullscreen.png"
-        style="scale: 10%; background-color: #202020; position: absolute; left: 710px; top: 790px;"
-        class="OptionsButton">
-    </button>
-
-  </div>
-  <div class="GameInfo" id="GameInfo" style="font-size: 15px; max-width: 700px;">
-    <p>
-      <strong>
-        FNF, or Friday Night Funkin', is a rhythm-based indie game that challenges players to groove their way through
-        musical battles. Join the main character, Boyfriend, as he faces off against various opponents in a bid to win
-        the heart of his Girlfriend. With catchy tunes, vibrant visuals, and rhythm-based gameplay, FNF offers a fun and
-        addictive experience for fans of music and gaming alike.
-      </strong>
-    </p>
-  </div>
-  <br>
-  <div class="GameCredits" id="GameCredits" style="font-size: 15px; max-width: 700px; background-color: black;">
-    <p>
-      <strong>
-        Game Credits:
-      </strong>
-      <br>
-      Ninjamuffin99
-    </p>
-  </div>
-
-
-  <div class="OtherGames" id="OtherGames"
-    style="background-color: #202020; position: absolute; margin-left: 83%; margin-top: -56%;">
-
-    <h1>
-      <strong>
-        Other Games
-      </strong>
-    </h1>
-
-    <button type="button" class="GameButton" onclick="" style="background-color: #202020; border: none;"><img
-        class="GameImg" src="../../assets/slope.png" width="250" height="150" style="border-radius: 15px;
-      border: 5px solid #ff4057;
-      padding: 0px;
-      "></img></button>
-
-    <br>
-
-    <button type="button" class="GameButton" onclick="" style="background-color: #202020; border: none;"><img
-        class="GameImg" src="../../assets/ducklife.webp" width="250" height="150" style="border-radius: 15px;
-      border: 5px solid #ff4057;
-      padding: 0px;
-      "></img></button>
-
-    <br>
-
-    <button type="button" class="GameButton" onclick="" style="background-color: #202020; border: none;"><img
-        class="GameImg" src="../../assets/gunmayhem.avif" width="250" height="150" style="border-radius: 15px;
-      border: 5px solid #ff4057;
-      padding: 0px;
-      "></img></button>
-
-    <br>
-
-    <button type="button" class="GameButton" onclick="" style="background-color: #202020; border: none;"><img
-        class="GameImg" src="../../assets/snake.jpg" width="250" height="150" style="border-radius: 15px;
-      border: 5px solid #ff4057;
-      padding: 0px;
-      "></img></button>
-
-
-  </div>
-
-
-  <div class="Controls" id="Controls"
-    style="background-color: black; max-width: 250px; max-height: 500; position: absolute; top: 500px; left: 850px;">
-
-    <h1>
-      <strong>
-        <center>
-          Controls:
-        </center>
-      </strong>
-    </h1>
-    <br>
-    <center>
-      <p>Forward: Keybind</p><br>
-      <p>Backward: Keybind</p><br>
-      <p>Left: Keybind</p><br>
-      <p>Right: Keybind</p><br>
-      <p>Jump: Keybind</p><br>
-    </center>
-  </div>
-
-
-  <br>
-
-  <script>
-
-    document.querySelector("#Controls").style.display = 'none';
-
-    function GameFullscreen() {
-      var iframe = document.getElementById("GameIframe");
-      if (iframe.requestFullscreen) {
-        iframe.requestFullscreen();
-      } else if (iframe.webkitRequestFullscreen) {
-        iframe.webkitRequestFullscreen();
-      } else if (iframe.msRequestFullscreen) {
-        iframe.msRequestFullscreen();
-      }
-    }
-
-    function Controls() {
-      var controls = document.querySelector("#Controls");
-      if (window.getComputedStyle(controls).display === 'block') {
-        controls.style.display = 'none';
-      } else {
-        controls.style.display = 'block';
-      }
-    }
-  </script>
-
-
-
-  <!--EMULATOR JS STUFF-->
-  <script type='text/javascript'>
-    EJS_player = '#GameIframe';
-
-    // Can also be fceumm or nestopia
-    EJS_core = 'n64';
-
-    // Lightgun
-    EJS_lightgun = false; // can be true or false
-
-    // URL to BIOS file
-    EJS_biosUrl = ''; // example: https://dl.dropboxusercontent.com/s/[random-code]/bios.bin
-
-    // URL to Game rom
-    EJS_gameUrl = 'sm64.z64'; // example: https://dl.dropboxusercontent.com/s/[random-code]/mario.nes
-
-    // Path to the data directory
-    EJS_pathtodata = '../../EmulatorJS-main/data/';
-  </script>
-  <script src='data/loader.js'></script>
-
-  <!--RUFFLE STUFF-->
-  <script src="../../ruffle-nightly-2023_11_14-web-selfhosted/ruffle.js"></script>
-
-  <footer style="background-color: #181818;
-    padding: 10px;
-    text-align: center;
-    color: white;">
-
-    <a href="https://discord.gg/5YjyZnraZz"><img src="../../assets/discord-favicon-white-outline.png" alt="discord logo"
-        width="35"></img></a>
-
-    <a href="https://www.tiktok.com/@villocity.mtg"><img src="../../assets/tiktok-favicon-white-outline.png"
-        alt="tiktok logo" width="30"></img></a>
-
-    <a href="#"><img src="../../assets/gmail-favicon-white-outline.png" alt="gmail logo" width="30"></img></a>
-
-  </footer>
-
-
-
-
+	
+	<noscript>This webpage makes extensive use of JavaScript. Please enable JavaScript in your web browser to view this page.</noscript>
+	
+	<div id="openfl-content"></div>
+	
+	<script type="text/javascript">
+		lime.embed ("Funkin", "openfl-content", 1280, 720, { parameters: {} });
+	</script>
+	
 </body>
-
 </html>
