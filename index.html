@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="icon" href="assets/obsidians-unblocked-favicon-white.png" type="image/x-icon">
+  <link rel="icon" href="../assets/obsidians-unblocked-favicon-white.png" type="image/x-icon">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>Home | Obsidians Unblocked</title>
@@ -15,12 +15,12 @@
 <body class="homepage" onload="initiateAudioCheck(); sendMessage()">
 
   <audio id="audioSource" loop preload="auto">
-    <source src="assets/wutiwant.mp3?v=1" type="audio/mpeg">
+    <source src="../assets/wutiwant.mp3?v=1" type="audio/mpeg">
     Your browser does not support the audio element.
   </audio>
   
   <div class="ObsidiansUnblockedHeader" id="Logo" style="text-align: center;">
-    <img src="assets/obsidians-unblocked-high-resolution-logo-transparent.png" style="scale: 35%;">
+    <img src="../assets/obsidians-unblocked-high-resolution-logo-transparent.png" style="scale: 35%;">
   </div>
 
   <div id="ButtonsContainer">
@@ -36,10 +36,10 @@
   </div>
 
   <div class="footer-main" id="regular-footer">
-    <a href="https://discord.gg/8D8mVEE2v4"><img src="assets/discord-favicon-white-outline.png" alt="discord logo" width="35"></a>
-    <a href="https://www.tiktok.com/@villocity.mtg"><img src="assets/tiktok-favicon-white-outline.png" alt="tiktok logo" width="30"></a>
-    <a href="mailto:segamega311@gmail.com"><img src="assets/gmail-favicon-white-outline.png" alt="gmail logo" width="30"></a>
-    <a onclick="toggleParticleColors()"><img src="assets/particle.png" alt="particle icon" width="30" id="particleColorToggleButton"></a>
+    <a href="https://discord.gg/8D8mVEE2v4"><img src="../assets/discord-favicon-white-outline.png" alt="discord logo" width="35"></a>
+    <a href="https://www.tiktok.com/@villocity.mtg"><img src="../assets/tiktok-favicon-white-outline.png" alt="tiktok logo" width="30"></a>
+    <a href="mailto:segamega311@gmail.com"><img src="../assets/gmail-favicon-white-outline.png" alt="gmail logo" width="30"></a>
+    <a onclick="toggleParticleColors()"><img src="../assets/particle.png" alt="particle icon" width="30" id="particleColorToggleButton"></a>
   </div>
 
   <!-- Centering container for the popup -->
@@ -48,7 +48,7 @@
       <strong>
         Version 2.1.0
         Changelog 9/29/24
-        <button type="button" onClick="hideChangelog()" style="margin-left: 30%; background-color: #0e0e0e; border-style:none;"><img src="assets/x-icon.png" width="30"></button>
+        <button type="button" onClick="hideChangelog()" style="margin-left: 30%; background-color: #0e0e0e; border-style:none;"><img src="../assets/x-icon.png" width="30"></button>
       </strong>
       <p>-------------------------------------------------------------------------------------</p>
       <strong>Added:</strong>
@@ -213,16 +213,16 @@
       <div class="menu-bar-icons">
         
         <a href="https://discord.gg/8D8mVEE2v4">
-          <img src="assets/discord-favicon-white-outline.png" alt="Discord logo" width="35">
+          <img src="../assets/discord-favicon-white-outline.png" alt="Discord logo" width="35">
         </a>
         <a href="https://www.tiktok.com/@villocity.mtg">
-          <img src="assets/tiktok-favicon-white-outline.png" alt="Tiktok logo" width="30">
+          <img src="../assets/tiktok-favicon-white-outline.png" alt="Tiktok logo" width="30">
         </a>
         <a href="mailto:segamega311@gmail.com">
-          <img src="assets/gmail-favicon-white-outline.png" alt="Gmail logo" width="30">
+          <img src="../assets/gmail-favicon-white-outline.png" alt="Gmail logo" width="30">
         </a>
         <a onclick="toggleParticleColors()">
-          <img src="assets/particle.png" alt="Particle icon" width="30" id="particleColorToggleButton2">
+          <img src="../assets/particle.png" alt="Particle icon" width="30" id="particleColorToggleButton2">
         </a>
       </div>
     </div>
@@ -239,8 +239,8 @@
       <iframe width="700px" height="500px" style="border-radius: 20px; border: none;" src="" id="game-display-iframe"></iframe>
   </div>
   <div style="display: flex; justify-content: center; align-items: center; margin: 0 auto; ">
-  <a onclick="ExitGame()" style="padding-right: 1200%;"><img src="assets/back-arrow.png" width="30"></a>
-  <a onclick="FullscreenGame()" style="padding-left: 95%;"><img src="assets/fullscreen.png" width="25"></a>
+  <a onclick="ExitGame()" style="padding-right: 1200%;"><img src="../assets/back-arrow.png" width="30"></a>
+  <a onclick="FullscreenGame()" style="padding-left: 95%;"><img src="../assets/fullscreen.png" width="25"></a>
   </div>
 </div>
 
@@ -248,7 +248,7 @@
 <div class="SettingsContainer" id="SettingsContainer">
   <div class="settings-popup" id="settings-popup">
     <button type="button" onClick="ToggleSettings()" style="background-color: #0e0e0e; border-style: none;">
-      <img src="assets/x-icon.png" width="30">
+      <img src="../assets/x-icon.png" width="30">
     </button>
     <br><br>
     <button type="button" onClick="OpenInBlank(null)" style="background-color: #0e0e0e; border-style: inset;">
@@ -537,960 +537,960 @@
     const gamesData = [
       {
         name: "Super Mario 64",
-        img: "assets/sm64.webp",
+        img: "../assets/sm64.webp",
         url: "games/sm64/emulator-sm64.html",
         redirect: false,
       },
       {
         name: "Super Mario 64 DS",
-        img: "assets/supermariods.webp",
+        img: "../assets/supermariods.webp",
         url: "games/sm64ds/emulator-sm64ds.html",
         redirect: false,
       },
       {
         name: "Slope",
-        img: "assets/slope.png",
+        img: "../assets/slope.png",
         url: "games/slope/index.html",
         redirect: false,
       },
       {
         name: "1v1.lol",
-        img: "assets/1v1lol.avif",
+        img: "../assets/1v1lol.avif",
         url: "games/1v1lol/1v1lol/index.html",
         redirect: false,
       },
       {
         name: "Bitlife",
-        img: "assets/bitlife.jpg",
+        img: "../assets/bitlife.jpg",
         url: "games/bitlife/bitlife.html",
         redirect: false,
       },
       {
         name: "Alien Hominid",
-        img: "assets/alienhominid.jfif",
+        img: "../assets/alienhominid.jfif",
         url: "games/alienhominid/alienhominid.html",
         redirect: false,
       },
       {
         name: "Eaglercraft 1.5.2",
-        img: "assets/eaglercraftold.jpg",
+        img: "../assets/eaglercraftold.jpg",
         url: "games/eaglercraft/eaglercraft.1.5.2.html",
         redirect: true,
       },
       {
         name: "Eaglercraft 1.8.8",
-        img: "assets/eaglercraft.jpg",
+        img: "../assets/eaglercraft.jpg",
         url: "games/eaglercraftmulti/eaglercraft.1.8.8.html",
         redirect: true,
       },
       {
         name: "Cookie Clicker",
-        img: "assets/cookieclicker.jpg",
+        img: "../assets/cookieclicker.jpg",
         url: "games/cookieclicker/index.html",
         redirect: false,
       },
       {
         name: "Bloxorz",
-        img: "assets/bloxorz.jfif",
+        img: "../assets/bloxorz.jfif",
         url: "games/bloxorz/bloxorz.html",
         redirect: false,
       },
       {
         name: "RetroArch",
-        img: "assets/retroarch.png",
+        img: "../assets/retroarch.png",
         url: "games/webretro-v6.5/index.html",
         redirect: false,
       },
       {
         name: "Emulator JS",
-        img: "assets/emulatorjs.jpeg",
+        img: "../assets/emulatorjs.jpeg",
         url: "../../EmulatorJS-main/index.html",
         redirect: false,
       },
       {
         name: "Diggy",
-        img: "assets/diggy.avif",
+        img: "../assets/diggy.avif",
         url: "games/diggy/diggy.html",
         redirect: false,
       },
       {
         name: "Doom",
-        img: "assets/doom.jpg",
+        img: "../assets/doom.jpg",
         url: "games/doom/emulator-doom.html",
         redirect: false,
       },
       {
         name: "Doom64",
-        img: "assets/doom64.jpg",
+        img: "../assets/doom64.jpg",
         url: "games/doom64/emulator-doom64.html",
         redirect: false,
       },
       {
         name: "Doodlejump",
-        img: "assets/doodlejump.jpg",
+        img: "../assets/doodlejump.jpg",
         url: "games/doodlejump/index.html",
         redirect: false,
       },
       {
         name: "Friday Night Funkin'",
-        img: "assets/fnf.png",
+        img: "../assets/fnf.png",
         url: "games/fnf/index.html",
         redirect: false,
       },
       {
         name: "Pico's School",
-        img: "assets/picosschool.png",
+        img: "../assets/picosschool.png",
         url: "games/picosschool/picosschool.html",
         redirect: false,
       },
       {
         name: "Ducklife",
-        img: "assets/ducklife.webp",
+        img: "../assets/ducklife.webp",
         url: "games/ducklife/ducklife.html",
         redirect: false,
       },
       {
         name: "Ducklife 2",
-        img: "assets/ducklife2.jfif",
+        img: "../assets/ducklife2.jfif",
         url: "games/ducklife2/ducklife2.html",
         redirect: false,
       },
       {
         name: "Ducklife 3 Evolution",
-        img: "assets/ducklife3.png",
+        img: "../assets/ducklife3.png",
         url: "games/ducklife3/ducklife3.html",
         redirect: false,
       },
       {
         name: "Ducklife 4",
-        img: "assets/ducklife4.png",
+        img: "../assets/ducklife4.png",
         url: "games/ducklife4/ducklife4.html",
         redirect: false,
       },
       {
         name: "Riddle School",
-        img: "assets/riddleschool.webp",
+        img: "../assets/riddleschool.webp",
         url: "games/riddleschool/riddleschool.html",
         redirect: false,
       },
       {
         name: "Riddle School 2",
-        img: "assets/riddleschool2.webp",
+        img: "../assets/riddleschool2.webp",
         url: "games/riddleschool2/riddleschool2.html",
         redirect: false,
       },
       {
         name: "Riddle School 3",
-        img: "assets/riddleschool3.webp",
+        img: "../assets/riddleschool3.webp",
         url: "games/riddleschool3/riddleschool3.html",
         redirect: false,
       },
       {
         name: "Riddle School 4",
-        img: "assets/riddleschool4.webp",
+        img: "../assets/riddleschool4.webp",
         url: "games/riddleschool4/riddleschool4.html",
         redirect: false,
       },
       {
         name: "Riddle School 5",
-        img: "assets/riddleschool5.webp",
+        img: "../assets/riddleschool5.webp",
         url: "games/riddleschool5/riddleschool5.html",
         redirect: false,
       },
       {
         name: "Riddle School Transfer",
-        img: "assets/riddletransfer.webp",
+        img: "../assets/riddletransfer.webp",
         url: "games/riddleschooltransfer/riddleschooltransfer.html",
         redirect: false,
       },
       {
         name: "Riddle School Transfer 2",
-        img: "assets/riddletransfer2.webp",
+        img: "../assets/riddletransfer2.webp",
         url: "games/riddleschooltransfer2/riddleschooltransfer2.html",
         redirect: false,
       },
       {
         name: "Retro Bowl",
-        img: "assets/retrobowl.jpg",
+        img: "../assets/retrobowl.jpg",
         url: "games/retrobowl/retrobowl/index.html",
         redirect: false,
       },
       {
         name: "Proxy",
-        img: "assets/proxyplaceholder.jpg",
+        img: "../assets/proxyplaceholder.jpg",
         url: "UV-Static-main/static/index.html",
         redirect: false,
       },
       {
         name: "Raft Wars",
-        img: "assets/raftwars.jpg",
+        img: "../assets/raftwars.jpg",
         url: "games/raftwars/raftwars.html",
         redirect: false,
       },
       {
         name: "Raft Wars 2",
-        img: "assets/raftwars2.webp",
+        img: "../assets/raftwars2.webp",
         url: "games/raftwars2/raftwars2.html",
         redirect: false,
       },
       {
         name: "Tetris",
-        img: "assets/tetris.webp",
+        img: "../assets/tetris.webp",
         url: "games/tetris/index.html",
         redirect: false,
       },
       {
         name: "Tony Hawk's Pro Skater 2",
-        img: "assets/tonyhawkproskater2.jpg",
+        img: "../assets/tonyhawkproskater2.jpg",
         url: "games/tonysproskater2/emulator-tonysproskater2.html",
         redirect: false,
       },
       {
         name: "The Impossible Quiz",
-        img: "assets/theimpossiblequiz.jfif",
+        img: "../assets/theimpossiblequiz.jfif",
         url: "games/theimpossiblequiz/theimpossiblequiz.html",
         redirect: false,
       },
       {
         name: "The Impossible Quiz 2",
-        img: "assets/theimpossiblequiz2.png",
+        img: "../assets/theimpossiblequiz2.png",
         url: "games/theimpossiblequiz2/theimpossiblequiz2.html",
         redirect: false,
       },
       {
         name: "Super Smash Flash",
-        img: "assets/supersmashflash.png",
+        img: "../assets/supersmashflash.png",
         url: "games/supersmashflash/supersmashflash.html",
         redirect: false,
       },
       {
         name: "Run",
-        img: "assets/run.avif",
+        img: "../assets/run.avif",
         url: "games/run/run.html",
         redirect: false,
       },
       {
         name: "Run 2",
-        img: "assets/run2.jpg",
+        img: "../assets/run2.jpg",
         url: "games/run2/run2.html",
         redirect: false,
       },
       {
         name: "Run 3",
-        img: "assets/run3.jpg",
+        img: "../assets/run3.jpg",
         url: "games/run3/run3.html",
         redirect: false,
       },
       {
         name: "Portal Flash",
-        img: "assets/portalflash.png",
+        img: "../assets/portalflash.png",
         url: "games/portalflash/portalflash.html",
         redirect: false,
       },
       {
         name: "Pokemon Red",
-        img: "assets/pokemonred.jfif",
+        img: "../assets/pokemonred.jfif",
         url: "games/pokemonred/emulator-pokemonred.html",
         redirect: false,
       },
       {
         name: "Pokemon Blue",
-        img: "assets/pokemonblue.jpg",
+        img: "../assets/pokemonblue.jpg",
         url: "games/pokemonblue/emulator-pokemonblue.html",
         redirect: false,
       },
       {
         name: "Pokemon Ruby",
-        img: "assets/pokemonruby.jfif",
+        img: "../assets/pokemonruby.jfif",
         url: "games/pokemonruby/emulator-pokemonruby.html",
         redirect: false,
       },
       {
         name: "Pokemon Emerald",
-        img: "assets/pokemonemerald.jfif",
+        img: "../assets/pokemonemerald.jfif",
         url: "games/pokemonemerald/index.html",
         redirect: false,
       },
       {
         name: "Pokemon Fire Red",
-        img: "assets/pokemonfirered.jfif",
+        img: "../assets/pokemonfirered.jfif",
         url: "games/pokemonfirered/index.html",
         redirect: false,
       },
       {
         name: "Pokemon Leaf Green",
-        img: "assets/pokemonleafgreen.jpg",
+        img: "../assets/pokemonleafgreen.jpg",
         url: "games/pokemonleafgreen/index.html",
         redirect: false,
       },
       {
         name: "Pokemon Sapphire",
-        img: "assets/pokemonsapphire.jpg",
+        img: "../assets/pokemonsapphire.jpg",
         url: "games/pokemonsapphire/index.html",
         redirect: false,
       },
       {
         name: "Pokemon Diamond",
-        img: "assets/pokemondiamond.jfif",
+        img: "../assets/pokemondiamond.jfif",
         url: "games/pokemondiamond/index.html",
         redirect: false,
       },
       {
         name: "Pokemon Platinum",
-        img: "assets/pokemonplatinum.png",
+        img: "../assets/pokemonplatinum.png",
         url: "games/pokemonplatinum/index.html",
         redirect: false,
       },
       {
         name: "Pokemon Soul Silver",
-        img: "assets/pokemonsoulsilver.jpg",
+        img: "../assets/pokemonsoulsilver.jpg",
         url: "games/pokemonsoulsilver/index.html",
         redirect: false,
       },
       {
         name: "Pokemon Unbound",
-        img: "assets/pokemonunbound.png",
+        img: "../assets/pokemonunbound.png",
         url: "games/pokemonunbound/index.html",
         redirect: false,
       },
       {
         name: "Pokemon Stadium",
-        img: "assets/pokemonstadium.webp",
+        img: "../assets/pokemonstadium.webp",
         url: "games/pokemonstadium/index.html",
         redirect: false,
       },
       {
         name: "Pokemon Snap",
-        img: "assets/pokemonsnap.webp",
+        img: "../assets/pokemonsnap.webp",
         url: "games/pokemonsnap/index.html",
         redirect: false,
       },
       {
         name: "Pokemon Yellow",
-        img: "assets/pokemonyellow.png",
+        img: "../assets/pokemonyellow.png",
         url: "games/pokemonyellow/index.html",
         redirect: false,
       },
       {
         name: "Lego Star Wars",
-        img: "assets/legostarwarsgba.jpg",
+        img: "../assets/legostarwarsgba.jpg",
         url: "games/legostarwars/emulator-legostarwars.html",
         redirect: false,
       },
       {
         name: "Learn To Fly",
-        img: "assets/learntofly.avif",
+        img: "../assets/learntofly.avif",
         url: "games/learntofly/learntofly.html",
         redirect: false,
       },
       {
         name: "Learn To Fly 2",
-        img: "assets/learntofly2.jpg",
+        img: "../assets/learntofly2.jpg",
         url: "games/learntofly2/learntofly2.html",
         redirect: false,
       },
       {
         name: "Learn To Fly 3",
-        img: "assets/learntofly3.jpg",
+        img: "../assets/learntofly3.jpg",
         url: "games/learntofly3/learntofly3.html",
         redirect: false,
       },
       {
         name: "Bloons TD",
-        img: "assets/bloonstowerdefense.jpg",
+        img: "../assets/bloonstowerdefense.jpg",
         url: "games/bloonstd/bloonstd.html",
         redirect: false,
       },
       {
         name: "Bloons TD 2",
-        img: "assets/btd2.webp",
+        img: "../assets/btd2.webp",
         url: "games/btd2/index.html",
         redirect: false,
       },
       {
         name: "Bloons TD 3",
-        img: "assets/btd3.jfif",
+        img: "../assets/btd3.jfif",
         url: "games/btd3/index.html",
         redirect: false,
       },
       {
         name: "Bloons TD 4",
-        img: "assets/btd4.webp",
+        img: "../assets/btd4.webp",
         url: "games/btd4/index.html",
         redirect: false,
       },
       {
         name: "Getaway Shootout",
-        img: "assets/getawayshootout.webp",
+        img: "../assets/getawayshootout.webp",
         url: "games/getawayshootout/GetawayShootout-master/index.html",
         redirect: false,
       },
       {
         name: "Rooftop Snipers",
-        img: "assets/rooftopsnipers.avif",
+        img: "../assets/rooftopsnipers.avif",
         url: "games/rooftopsnipers/rooftopsnipers-master/index.html",
         redirect: false,
       },
       {
         name: "Wolfenstein 3D",
-        img: "assets/wolfenstein3d.jpg",
+        img: "../assets/wolfenstein3d.jpg",
         url: "games/wolfenstein3d/wolfenstein3d/index.html",
         redirect: false,
       },
       {
         name: "Gun Mayhem",
-        img: "assets/gunmayhem.avif",
+        img: "../assets/gunmayhem.avif",
         url: "games/gunmayhem/gunmayhem.html",
         redirect: false,
       },
       {
         name: "Gun Mayhem 2",
-        img: "assets/gunmayhem2.png",
+        img: "../assets/gunmayhem2.png",
         url: "games/gunmayhem2/gunmayhem2.html",
         redirect: false,
       },
       {
         name: "Gun Mayhem Redux",
-        img: "assets/gunmayhemredux.webp",
+        img: "../assets/gunmayhemredux.webp",
         url: "games/gunmayhemredux/gunmayhemredux.html",
         redirect: false,
       },
       {
         name: "Minesweeper",
-        img: "assets/Minesweeper.jfif",
+        img: "../assets/Minesweeper.jfif",
         url: "games/minesweeper/minesweeper-master/index.html",
         redirect: false,
       },
       {
         name: "Moto X3M",
-        img: "assets/motox3m.png",
+        img: "../assets/motox3m.png",
         url: "games/motox3m/motox3m.html",
         redirect: false,
       },
       {
         name: "Moto X3M 2",
-        img: "assets/motox3m2.jpg",
+        img: "../assets/motox3m2.jpg",
         url: "games/motox3m2/motox3m2.html",
         redirect: false,
       },
       {
         name: "Super Smash Bros",
-        img: "assets/supersmashbros.jpg",
+        img: "../assets/supersmashbros.jpg",
         url: "games/supersmashbros/index.html",
         redirect: false,
       },
       {
         name: "Subway Surfers",
-        img: "assets/subwaysurfers.webp",
+        img: "../assets/subwaysurfers.webp",
         url: "games/subwaysurfers/index.html",
         redirect: false,
       },
       {
         name: "Crossy Road",
-        img: "assets/crossyroad.avif",
+        img: "../assets/crossyroad.avif",
         url: "games/crossyroad/index.html",
         redirect: false,
       },
       {
         name: "Jetpack Joyride",
-        img: "assets/jetpackjoyride.webp",
+        img: "../assets/jetpackjoyride.webp",
         url: "games/jetpackjoyride/index.html",
         redirect: false,
       },
       {
         name: "Chrome Dino Game",
-        img: "assets/chromedinogame.avif",
+        img: "../assets/chromedinogame.avif",
         url: "games/chromedinogame/index.html",
         redirect: false,
       },
       {
         name: "Papa's Pizzaria",
-        img: "assets/papaspizzaria.png",
+        img: "../assets/papaspizzaria.png",
         url: "games/papaspizzaria/index.html",
         redirect: false,
       },
       {
         name: "Papa's Burgeria",
-        img: "assets/papasburgeria.jfif",
+        img: "../assets/papasburgeria.jfif",
         url: "games/papasburgeria/index.html",
         redirect: false,
       },
       {
         name: "Papa's Hotdoggeria",
-        img: "assets/papashotdoggeria.jfif",
+        img: "../assets/papashotdoggeria.jfif",
         url: "games/papashotdoggeria/index.html",
         redirect: false,
       },
       {
         name: "Papa's Pancakeria",
-        img: "assets/papaspancakeria.webp",
+        img: "../assets/papaspancakeria.webp",
         url: "games/papaspancakeria/index.html",
         redirect: false,
       },
       {
         name: "Papa's Freezeria",
-        img: "assets/papasfreezeria.webp",
+        img: "../assets/papasfreezeria.webp",
         url: "games/papasfreezeria/index.html",
         redirect: false,
       },
       {
         name: "Papa's Scooperia",
-        img: "assets/papasscooperia.jpg",
+        img: "../assets/papasscooperia.jpg",
         url: "games/papasscooperia/index.html",
         redirect: false,
       },
       {
         name: "Papa's Sushiria",
-        img: "assets/papassushiria.jfif",
+        img: "../assets/papassushiria.jfif",
         url: "games/papassushiria/index.html",
         redirect: false,
       },
       {
         name: "Papa's Wingeria",
-        img: "assets/papaswingeria.jfif",
+        img: "../assets/papaswingeria.jfif",
         url: "games/papaswingeria/index.html",
         redirect: false,
       },
       {
         name: "Papa's Donuteria",
-        img: "assets/papasdonuteria.jfif",
+        img: "../assets/papasdonuteria.jfif",
         url: "games/papasdonuteria/index.html",
         redirect: false,
       },
       {
         name: "Papa's Cheeseria",
-        img: "assets/papascheeseria.jfif",
+        img: "../assets/papascheeseria.jfif",
         url: "games/papascheeseria/index.html",
         redirect: false,
       },
       {
         name: "Papa's Cupcakeria",
-        img: "assets/papascupcakeria.jpg",
+        img: "../assets/papascupcakeria.jpg",
         url: "games/papascupcakeria/index.html",
         redirect: false,
       },
       {
         name: "Papa's Bakeria",
-        img: "assets/papasbakeria.jpg",
+        img: "../assets/papasbakeria.jpg",
         url: "games/papasbakeria/index.html",
         redirect: false,
       },
       {
         name: "Papa's Pastaria",
-        img: "assets/papaspastaria.jfif",
+        img: "../assets/papaspastaria.jfif",
         url: "games/papaspastaria/index.html",
         redirect: false,
       },
       {
         name: "Papa's Tacomia",
-        img: "assets/papastacomia.png",
+        img: "../assets/papastacomia.png",
         url: "games/papastacomia/index.html",
         redirect: false,
       },
       {
         name: "Fruit Ninja",
-        img: "assets/fruitninja.avif",
+        img: "../assets/fruitninja.avif",
         url: "games/fruitninja/index.html",
         redirect: false,
       },
       {
         name: "2048",
-        img: "assets/2048.png",
+        img: "../assets/2048.png",
         url: "games/2048/index.html",
         redirect: false,
       },
       {
         name: "Fancy Pants Adventure",
-        img: "assets/fancypantsadventure.png",
+        img: "../assets/fancypantsadventure.png",
         url: "games/fancypantsadventure/index.html",
         redirect: false,
       },
       {
         name: "Fancy Pants Adventure 2",
-        img: "assets/fancypantsadventure2.avif",
+        img: "../assets/fancypantsadventure2.avif",
         url: "games/fancypantsadventure2/index.html",
         redirect: false,
       },
       {
         name: "Fancy Pants Adventure 3",
-        img: "assets/fancypantsadventure3.avif",
+        img: "../assets/fancypantsadventure3.avif",
         url: "games/fancypantsadventure3/index.html",
         redirect: false,
       },
       {
         name: "Happy Wheels",
-        img: "assets/happywheels.png",
+        img: "../assets/happywheels.png",
         url: "games/happywheels/index.html",
         redirect: false,
       },
       {
         name: "Paper.io 2",
-        img: "assets/paperio2.jfif",
+        img: "../assets/paperio2.jfif",
         url: "games/paperio2/index.html",
         redirect: false,
       },
       {
         name: "Superhot",
-        img: "assets/superhot.png",
+        img: "../assets/superhot.png",
         url: "games/superhot/index.html",
         redirect: false,
       },
       {
         name: "The Binding of Isaac",
-        img: "assets/thebindingofisaac.jpg",
+        img: "../assets/thebindingofisaac.jpg",
         url: "games/thebindingofisaac/index.html",
         redirect: false,
       },
       {
         name: "Townscaper",
-        img: "assets/townscaper.avif",
+        img: "../assets/townscaper.avif",
         url: "games/townscaper/index.html",
         redirect: false,
       },
       {
         name: "Tunnel Rush",
-        img: "assets/tunnelrush.webp",
+        img: "../assets/tunnelrush.webp",
         url: "games/tunnelrush/index.html",
         redirect: false,
       },
       {
         name: "Theme Hotel",
-        img: "assets/themehotel.png",
+        img: "../assets/themehotel.png",
         url: "games/themehotel/index.html",
         redirect: false,
       },
       {
         name: "Escaping The Prison",
-        img: "assets/escapingtheprison.jfif",
+        img: "../assets/escapingtheprison.jfif",
         url: "games/escapingtheprison/index.html",
         redirect: false,
       },
       {
         name: "Stealing The Diamond",
-        img: "assets/stealingthediamond.jpg",
+        img: "../assets/stealingthediamond.jpg",
         url: "games/stealingthediamond/index.html",
         redirect: false,
       },
       {
         name: "Infiltrating The Airship",
-        img: "assets/infiltratingtheairship.png",
+        img: "../assets/infiltratingtheairship.png",
         url: "games/infiltratingtheairship/index.html",
         redirect: false,
       },
       {
         name: "Fleeing The Complex",
-        img: "assets/fleeingthecomplex.jpg",
+        img: "../assets/fleeingthecomplex.jpg",
         url: "games/fleeingthecomplex/index.html",
         redirect: false,
       },
       {
         name: "Solitaire",
-        img: "assets/solitaire.jfif",
+        img: "../assets/solitaire.jfif",
         url: "games/solitaire/index.html",
         redirect: false,
       },
       {
         name: "Drift Hunters",
-        img: "assets/drifthunters.png",
+        img: "../assets/drifthunters.png",
         url: "games/drifthunters/index.html",
         redirect: false,
       },
       {
         name: "Vex",
-        img: "assets/vex.png",
+        img: "../assets/vex.png",
         url: "games/vex/index.html",
         redirect: false,
       },
       {
         name: "Vex 2",
-        img: "assets/vex2.webp",
+        img: "../assets/vex2.webp",
         url: "games/vex2/index.html",
         redirect: false,
       },
       {
         name: "Vex 3",
-        img: "assets/vex3.png",
+        img: "../assets/vex3.png",
         url: "games/vex3/index.html",
         redirect: false,
       },
       {
         name: "Vex 4",
-        img: "assets/vex4.png",
+        img: "../assets/vex4.png",
         url: "games/vex4/index.html",
         redirect: false,
       },
       {
         name: "Vex 5",
-        img: "assets/vex5.webp",
+        img: "../assets/vex5.webp",
         url: "games/vex5/index.html",
         redirect: false,
       },
       {
         name: "Vex 6",
-        img: "assets/vex6.jpg",
+        img: "../assets/vex6.jpg",
         url: "games/vex6/index.html",
         redirect: false,
       },
       {
         name: "Vex 7",
-        img: "assets/vex7.jpg",
+        img: "../assets/vex7.jpg",
         url: "games/vex7/index.html",
         redirect: false,
       },
       {
         name: "Among Us",
-        img: "assets/amongus.webp",
+        img: "../assets/amongus.webp",
         url: "games/amongus/index.html",
         redirect: false,
       },
       {
         name: "Edge Surf",
-        img: "assets/edgesurf.jpg",
+        img: "../assets/edgesurf.jpg",
         url: "games/edgesurf/index.html",
         redirect: false,
       },
       {
         name: "Five Nights At Freddy's",
-        img: "assets/fnaf.webp",
+        img: "../assets/fnaf.webp",
         url: "games/fnaf/fnaf.html",
         redirect: false,
       },
       {
         name: "Five Nights At Freddy's 2",
-        img: "assets/fnaf2.webp",
+        img: "../assets/fnaf2.webp",
         url: "games/fnaf2/fnaf2.html",
         redirect: false,
       },
       {
         name: "Five Nights At Freddy's 3",
-        img: "assets/fnaf3.jpg",
+        img: "../assets/fnaf3.jpg",
         url: "games/fnaf3/fnaf3.html",
         redirect: false,
       },
       {
         name: "Five Nights At Freddy's 4",
-        img: "assets/fnaf4.webp",
+        img: "../assets/fnaf4.webp",
         url: "games/fnaf4/fnaf4.html",
         redirect: false,
       },
       {
         name: "Drift Boss",
-        img: "assets/driftboss.jfif",
+        img: "../assets/driftboss.jfif",
         url: "games/driftboss/index.html",
         redirect: false,
       },
       {
         name: "Pacman",
-        img: "assets/pacman.jfif",
+        img: "../assets/pacman.jfif",
         url: "games/pacman/index.html",
         redirect: false,
       },
       {
         name: "Baldi's Basics",
-        img: "assets/baldisbasics.webp",
+        img: "../assets/baldisbasics.webp",
         url: "games/baldisbasics/index.html",
         redirect: false,
       },
       {
         name: "Bob The Robber 2",
-        img: "assets/bobtherobber2.webp",
+        img: "../assets/bobtherobber2.webp",
         url: "games/bobtherobber2/index.html",
         redirect: false,
       },
       {
         name: "Super Mario Bros",
-        img: "assets/supermariobros.webp",
+        img: "../assets/supermariobros.webp",
         url: "games/supermariobros/index.html",
         redirect: false,
       },
       {
         name: "Super Mario Bros 2",
-        img: "assets/supermariobros2.webp",
+        img: "../assets/supermariobros2.webp",
         url: "games/supermariobros2/index.html",
         redirect: false,
       },
       {
         name: "Super Mario Bros 3",
-        img: "assets/supermariobros3.jfif",
+        img: "../assets/supermariobros3.jfif",
         url: "games/supermariobros3/index.html",
         redirect: false,
       },
       {
         name: "New Super Mario Bros",
-        img: "assets/newsupermariobros.webp",
+        img: "../assets/newsupermariobros.webp",
         url: "games/newsupermariobros/index.html",
         redirect: false,
       },
       {
         name: "Super Mario Kart",
-        img: "assets/supermariokart.jpg",
+        img: "../assets/supermariokart.jpg",
         url: "games/supermariokart/index.html",
         redirect: false,
       },
       {
         name: "Super Mario World",
-        img: "assets/supermarioworld.webp",
+        img: "../assets/supermarioworld.webp",
         url: "games/supermarioworld/index.html",
         redirect: false,
       },
       {
         name: "Super Mario Land",
-        img: "assets/supermarioland.png",
+        img: "../assets/supermarioland.png",
         url: "games/supermarioland/index.html",
         redirect: false,
       },
       {
         name: "Super Mario Land 2",
-        img: "assets/supermarioland2.jpg",
+        img: "../assets/supermarioland2.jpg",
         url: "games/supermarioland2/index.html",
         redirect: false,
       },
       {
         name: "There Is No Game",
-        img: "assets/thereisnogame.jpg",
+        img: "../assets/thereisnogame.jpg",
         url: "games/thereisnogame/index.html",
         redirect: false,
       },
       {
         name: "Worlds Hardest Game",
-        img: "assets/theworldshardestgame.png",
+        img: "../assets/theworldshardestgame.png",
         url: "games/worldshardestgame/index.html",
         redirect: false,
       },
       {
         name: "Worlds Hardest Game 2",
-        img: "assets/theworldshardestgame2.jpg",
+        img: "../assets/theworldshardestgame2.jpg",
         url: "games/worldshardestgame2/index.html",
         redirect: false,
       },
       {
         name: "Worlds Hardest Game 3",
-        img: "assets/theworldshardestgame3.png",
+        img: "../assets/theworldshardestgame3.png",
         url: "games/worldshardestgame3/index.html",
         redirect: false,
       },
       {
         name: "Castlevania",
-        img: "assets/castlevania.jpg",
+        img: "../assets/castlevania.jpg",
         url: "games/castlevania/index.html",
         redirect: false,
       },
       {
         name: "Castlevania III Dracula's Curse",
-        img: "assets/castlevania3.png",
+        img: "../assets/castlevania3.png",
         url: "games/castlevaniaiii/index.html",
         redirect: false,
       },
       {
         name: "Castlevania Aria Of Sorrow",
-        img: "assets/castlevaniaariaofsorrow.jfif",
+        img: "../assets/castlevaniaariaofsorrow.jfif",
         url: "games/castlevaniaariaofsorrow/index.html",
         redirect: false,
       },
       {
         name: "Castlevania Dawn Of Sorrow",
-        img: "assets/castlevaniadawnofsorrow.jpg",
+        img: "../assets/castlevaniadawnofsorrow.jpg",
         url: "games/castlevaniadawnofsorrow/index.html",
         redirect: false,
       },
       {
         name: "Castlevania Order Of Ecclesia",
-        img: "assets/castlevaniaorderofecclesia.jpg",
+        img: "../assets/castlevaniaorderofecclesia.jpg",
         url: "games/castlevaniaorderofecclesia/index.html",
         redirect: false,
       },
       {
         name: "Donkey Kong",
-        img: "assets/donkeykong.webp",
+        img: "../assets/donkeykong.webp",
         url: "games/donkeykong/index.html",
         redirect: false,
       },
       {
         name: "Dr. Mario",
-        img: "assets/drmario.jpg",
+        img: "../assets/drmario.jpg",
         url: "games/drmario/index.html",
         redirect: false,
       },
       {
         name: "Metroid",
-        img: "assets/metroid.webp",
+        img: "../assets/metroid.webp",
         url: "games/metroid/index.html",
         redirect: false,
       },
       {
         name: "The Legend Of Zelda",
-        img: "assets/thelegendofzelda.webp",
+        img: "../assets/thelegendofzelda.webp",
         url: "games/thelegendofzelda/index.html",
         redirect: false,
       },
       {
         name: "WarioWare",
-        img: "assets/warioware.jpg",
+        img: "../assets/warioware.jpg",
         url: "games/warioware/index.html"
       },
       {
         name: "Yoshi's Island",
-        img: "assets/yoshisisland.webp",
+        img: "../assets/yoshisisland.webp",
         url: "games/yoshisisland/index.html",
         redirect: false,
       },
       {
         name: "Donkey Kong Land",
-        img: "assets/donkeykongland.png",
+        img: "../assets/donkeykongland.png",
         url: "games/donkeykongland/index.html",
         redirect: false,
       },
       {
         name: "Kirby's Dream Land",
-        img: "assets/kirbysdreamland.png",
+        img: "../assets/kirbysdreamland.png",
         url: "games/kirbysdreamland/index.html",
         redirect: false,
       },
       {
         name: "Kirby's Dream Land 2",
-        img: "assets/kirbysdreamland2.png",
+        img: "../assets/kirbysdreamland2.png",
         url: "games/kirbysdreamland2/index.html",
         redirect: false,
       },
       {
         name: "Doge Miner",
-        img: "assets/dogeminer.avif",
+        img: "../assets/dogeminer.avif",
         url: "games/dogeminer/index.html",
         redirect: false,
       },
       {
         name: "Tanuki Sunset",
-        img: "assets/tanukisunset.jfif",
+        img: "../assets/tanukisunset.jfif",
         url: "games/tanukisunset/index.html",
         redirect: false,
       },
       {
         name: "Aqua Slides",
-        img: "assets/aquaslides.png",
+        img: "../assets/aquaslides.png",
         url: "games/aquaparkslides/index.html",
         redirect: false,
       },
       {
         name: "Color Switch",
-        img: "assets/colorswitch.webp",
+        img: "../assets/colorswitch.webp",
         url: "games/colorswitch/index.html",
         redirect: false,
       },
       {
         name: "Bomberman",
-        img: "assets/bomberman.jpg",
+        img: "../assets/bomberman.jpg",
         url: "games/bomberman/index.html",
         redirect: false,
       },
       {
         name: "Fire Emblem",
-        img: "assets/fireemblem.jpg",
+        img: "../assets/fireemblem.jpg",
         url: "games/fireemblem/index.html",
         redirect: false,
       },
       {
         name: "Ice Climber",
-        img: "assets/iceclimber.webp",
+        img: "../assets/iceclimber.webp",
         url: "games/iceclimber/index.html",
         redirect: false,
       },
@@ -1634,7 +1634,7 @@ let alreadyFixed = false;
       scene.remove(particleSystem);
       particleSystem = new THREE.Points(particles, isColored ? coloredMaterial : whiteMaterial);
       scene.add(particleSystem);
-      const imageSrc = isColored ? "assets/particle-colored.png" : "assets/particle.png";
+      const imageSrc = isColored ? "../assets/particle-colored.png" : "../assets/particle.png";
       document.getElementById("particleColorToggleButton").src = imageSrc;
       document.getElementById("particleColorToggleButton2").src = imageSrc;
     }
