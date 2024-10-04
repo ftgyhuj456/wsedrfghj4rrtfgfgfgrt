@@ -152,10 +152,6 @@ a:hover {
     gap: 10px; /* Adds a gap between icons */
   }
   
-  .search-icon-container {
-     /* Adjusts the gap between the search icon and the rest */
-  }
-  
   .menu-bar-search-button {
     background-color: #0e0e0e;
     padding: 20px;
@@ -234,6 +230,55 @@ a:hover {
     background: #555; /* Handle color on hover */
   } 
 
+
+     /* Settings popup styling */
+     .settings-popup {
+       background-color: #0e0e0e;
+       padding: 20px;
+       width: 35vw;
+       /* 35% of the viewport width */
+       max-height: 35vh;
+       /* 35% of the viewport height */
+       overflow-y: auto;
+       border-style: inset;
+       border-radius: 20px;
+       border-color: white;
+       z-index: 1001;
+       /* Ensure it stays above other content */
+       position: fixed;
+       /* Position it relative to the screen */
+       top: 50%;
+       /* Center vertically */
+       left: 50%;
+       /* Center horizontally */
+       transform: translate(-50%, -50%);
+       /* Adjusts to perfectly center */
+     }
+  
+     /* Custom scrollbar styles for WebKit browsers */
+     .settings-popup::-webkit-scrollbar {
+       width: 12px;
+       /* Width of the scrollbar */
+       height: 5px;
+     }
+  
+     .settings-popup::-webkit-scrollbar-track {
+       background: #0e0e0e;
+       /* Track color */
+       border-radius: 20px;
+     }
+  
+     .settings-popup::-webkit-scrollbar-thumb {
+       background: #888;
+       /* Handle color */
+       border-radius: 20px;
+       /* Rounded corners for the handle */
+     }
+  
+     .settings-popup::-webkit-scrollbar-thumb:hover {
+       background: #555;
+       /* Handle color on hover */
+     }
 
 
 .ObsidiansUnblockedHeader  {
