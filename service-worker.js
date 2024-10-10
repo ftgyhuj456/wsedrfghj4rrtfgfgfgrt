@@ -1,5 +1,5 @@
-const CACHE_NAME = 'offline-cache-v1';
-const urlsToCache = [
+const CACHE_NAME_ASSETS = 'offline-assets';
+const assetsToCache = [
   '/index.html',
   '/main.css',
   'assets/1v1lol.avif',
@@ -224,24 +224,41 @@ const urlsToCache = [
   
 ];
 
-self.addEventListener('install', event => {
-  event.waitUntil(
-    caches.open(CACHE_NAME)
-      .then(cache => {
-        console.log('Opened cache');
-        return cache.addAll(urlsToCache);
-      })
-  );
-});
+const CACHE_NAME_GAMES = 'offline-games';
+const gamesToCache = [
+    'games/eaglercraft/eaglercraft.1.5.2.html',
+    'games/eaglercraftmulti/eaglercraft.1.8.8.html',
+];
 
-self.addEventListener('fetch', event => {
-  event.respondWith(
-    caches.match(event.request)
-      .then(response => {
-        if (response) {
-          return response;  // Return cached asset
-        }
-        return fetch(event.request);  // Fetch from network
-      })
-  );
-});
+// Install event
+self.addEventListener('install', event => {
+    event.waitUntil(
+      Promise.all([
+        // Cache assets
+        caches.open(CACHE_NAME_ASSETS)
+          .then(cache => {
+            console.log('Opened assets cache');
+            return cache.addAll(assetsToCache);
+          }),
+        // Cache games
+        caches.open(CACHE_NAME_GAMES)
+          .then(cache => {
+            console.log('Opened games cache');
+            return cache.addAll(gamesToCache);
+          })
+      ])
+    );
+  });
+  
+  // Fetch event
+  self.addEventListener('fetch', event => {
+    event.respondWith(
+      caches.match(event.request)
+        .then(response => {
+          if (response) {
+            return response;  // Return cached asset
+          }
+          return fetch(event.request);  // Fetch from network
+        })
+    );
+  });
