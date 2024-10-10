@@ -226,9 +226,9 @@ const assetsToCache = [
 
 const CACHE_NAME_GAMES = 'offline-games';
 const gamesToCache = [
-    '/service-worker.js',
-    '/register-service-workers.js',
-    '/manifest.json',
+    'service-worker.js',
+    'register-service-workers.js',
+    'manifest.json',
     'games/eaglercraft/eaglercraft.1.5.2.html',
     'games/eaglercraftmulti/eaglercraft.1.8.8.html',
     'games/slope/index.html',

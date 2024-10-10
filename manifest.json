@@ -1,7 +1,7 @@
 {
     "name": "Obsidians Unblocked",
     "short_name": "Unblocked Games",
-    "start_url": "/index.html",
+    "start_url": "index.html",
     "display": "standalone",
     "background_color": "#000000",
     "theme_color": "#FFFFFF",
