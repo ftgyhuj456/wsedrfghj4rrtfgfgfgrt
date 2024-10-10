@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="icon" href="../../assets/obsidians-unblocked-favicon-white.png" type="image/x-icon">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Home | Obsidians Unblocked</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <link rel="stylesheet" href="main.css">
+  <link href='https://fonts.googleapis.com/css?family=Alfa Slab One' rel='stylesheet'>
+</head>
+<body class="homepage" onload="initiateAudioCheck(); sendMessage()">
+
+  <audio id="audioSource" loop preload="auto">
+    <source src="../../assets/wutiwant.mp3?v=1" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  
+  <div class="ObsidiansUnblockedHeader" id="Logo" style="text-align: center;">
+    <img src="../../assets/obsidians-unblocked-high-resolution-logo-transparent.png" style="scale: 35%;">
+  </div>
+
+  <div id="ButtonsContainer">
+    <div class="homepage-buttons" id="Admin">
+      <a onClick="ToggleGames()" class="buttons-a"><strong>Admin</strong></a>
+    </div>
+    <div class="homepage-buttons" id="Changes">
+      <strong>Changes</strong>
+    </div>
+    <div class="homepage-buttons" id="Settings">
+      <a onClick="ToggleSettings()" class="buttons-a"><strong>Settings</strong></a>
+    </div>
+  </div>
+
+  <div class="footer-main" id="regular-footer">
+    <a href="https://discord.gg/8D8mVEE2v4"><img src="../../assets/discord-favicon-white-outline.png" alt="discord logo" width="35"></a>
+    <a href="https://www.tiktok.com/@villocity.mtg"><img src="../../assets/tiktok-favicon-white-outline.png" alt="tiktok logo" width="30"></a>
+    <a href="mailto:segamega311@gmail.com"><img src="../../assets/gmail-favicon-white-outline.png" alt="gmail logo" width="30"></a>
+    <a onclick="toggleParticleColors()"><img src="../../assets/particle.png" alt="particle icon" width="30" id="particleColorToggleButton"></a>
+  </div>
+
+  <!-- Centering container for the popup -->
+  
+
+  
+
+  <div class="menu-bar-container" id="MenuBarContainer">
+    <div class="menu-bar">
+      <div class="menu-bar-buttons">
+        <div class="menu-bar-button" id="Games">
+          <a onClick="ToggleGames()" class="buttons-a"><strong>Home</strong></a>
+        </div>
+        <div class="menu-bar-button" id="Changes">
+          <strong>Changes</strong>
+        </div>
+        <div class="menu-bar-button" id="Settings">
+          <a onClick="ToggleSettings()" class="buttons-a"><strong>Settings</strong></a>
+        </div>
+      </div>
+	  <!-- Search bar for filtering games -->
+	  <div class="search-bar">
+		<input type="text" id="searchInput" placeholder="Search Games" onkeyup="searchGames()" style="text-align: center;">
+	  </div>
+      <div class="menu-bar-icons">
+        
+        <a href="https://discord.gg/8D8mVEE2v4">
+          <img src="../../assets/discord-favicon-white-outline.png" alt="Discord logo" width="35">
+        </a>
+        <a href="https://www.tiktok.com/@villocity.mtg">
+          <img src="../../assets/tiktok-favicon-white-outline.png" alt="Tiktok logo" width="30">
+        </a>
+        <a href="mailto:segamega311@gmail.com">
+          <img src="../../assets/gmail-favicon-white-outline.png" alt="Gmail logo" width="30">
+        </a>
+        <a onclick="toggleParticleColors()">
+          <img src="../../assets/particle.png" alt="Particle icon" width="30" id="particleColorToggleButton2">
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Games Divs/Containers -->
+  <div class="GamesContainer" id="GamesContainer">
+    <!-- Dynamically loaded games will appear here -->
+  </div>
+
+  <!-- GAME DISPLAY -->
+<div class="game-display-container" id="game-display-container" style="flex-direction:column; background-color:black;width: 800px; border-style: inset; border-color: white; border-radius: 20px; border-width: 3px; display: flex; justify-content: center; align-items: center; margin: 0 auto; padding: 15px; ">
+  <div class="game-display" id="game-display" style="display: flex;">
+      <iframe width="700px" height="500px" style="border-radius: 20px; border: none;" src="" id="game-display-iframe"></iframe>
+  </div>
+  <div style="display: flex; justify-content: center; align-items: center; margin: 0 auto; ">
+  <a onclick="ExitGame()" style="padding-right: 1200%;"><img src="../../assets/back-arrow.png" width="30"></a>
+  <a onclick="FullscreenGame()" style="padding-left: 95%;"><img src="../../assets/fullscreen.png" width="25"></a>
+  </div>
+</div>
+
+<!-- Website Settings Page -->
+<div class="SettingsContainer" id="SettingsContainer">
+  <div class="settings-popup" id="settings-popup">
+    <button type="button" onClick="ToggleSettings()" style="background-color: #0e0e0e; border-style: none;">
+      <img src="../../assets/x-icon.png" width="30">
+    </button>
+    <br><br>
+    <button type="button" onClick="OpenInBlank(null)" style="background-color: #0e0e0e; border-style: inset;">
+      Open in blank page [About:Blank Tab Cloaking]
+    </button>
+    <br><br>
+    <strong>Open games in new tab: </strong>
+    <button type="button" id="openGamesInNewTabToggleButton" onClick="ToggleOpenGamesInNewTab()"
+      style="background-color: #0e0e0e; border-style: inset;">
+      <!-- Button text will be set dynamically -->
+    </button>
+    <br><br>
+    <strong>Tab cloak games: </strong>
+    <button type="button" id="tabCloakGamesToggleButton" onClick="ToggleTabCloakGames()"
+      style="background-color: #0e0e0e; border-style: inset;">
+      <!-- Button text will be set dynamically -->
+    </button>
+  </div>
+</div>
+
+<script>
+  // Function to set a cookie
+  function setCookie(name, value, days) {
+    let expires = "";
+    if (days) {
+      const date = new Date();
+      date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+      expires = "; expires=" + date.toUTCString();
+    }
+    document.cookie = name + "=" + (value || "") + expires + "; path=/";
+  }
+
+  // Function to get a cookie by name
+  function getCookie(name) {
+    const nameEQ = name + "=";
+    const ca = document.cookie.split(';');
+    for (let i = 0; i < ca.length; i++) {
+      let c = ca[i];
+      while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+      if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+    }
+    return null;
+  }
+
+  // Function to delete a cookie by name
+  function eraseCookie(name) {
+    document.cookie = name + "=; Max-Age=-99999999; path=/";
+  }
+
+  let openGamesInNewTab = false;
+  let tabCloakGames = false;
+
+  // Function to toggle the open games in new tab setting
+  function ToggleOpenGamesInNewTab() {
+    openGamesInNewTab = !openGamesInNewTab; // Toggle the setting
+    setCookie('openGamesInNewTab', openGamesInNewTab, 30); // Save to cookie
+    updateOpenGamesInNewTabToggleButton();
+  }
+  // Update button text based on setting
+  function updateOpenGamesInNewTabToggleButton() {
+    const button = document.getElementById("openGamesInNewTabToggleButton");
+    button.innerText = openGamesInNewTab ? "Enabled" : "Disabled";
+  }
+
+
+  function ToggleTabCloakGames() {
+      tabCloakGames = !tabCloakGames; // Toggle the setting
+      setCookie('tabCloakGames', tabCloakGames, 30); // Save to cookie
+      updateTabCloakGamesToggleButton();
+    }
+    function updateTabCloakGamesToggleButton() {
+        const button = document.getElementById("tabCloakGamesToggleButton");
+        button.innerText = tabCloakGames ? "Enabled" : "Disabled";
+    }
+
+
+
+  // Load settings when the page is loaded
+  window.onload = function () {
+    const savedSetting1 = getCookie('openGamesInNewTab');
+    const savedSetting2 = getCookie('tabCloakGames');
+    if (savedSetting1 !== null) {
+      openGamesInNewTab = (savedSetting1 === 'true'); // Convert string to boolean
+    }
+    if (savedSetting2 !== null) {
+      tabCloakGames = (savedSetting2 === 'true'); // Convert string to boolean
+    }
+    updateOpenGamesInNewTabToggleButton(); // Update button based on saved setting
+    updateTabCloakGamesToggleButton();
+  }
+
+  function OpenInBlank(url) {
+    // Open a new tab with about:blank
+    let newTab = window.open('about:blank', '_blank');
+
+    // Check if the tab was successfully opened
+    if (newTab) {
+      // Get the current URL
+      let currentUrl = "";
+      if (url == null) {
+        currentUrl = window.location.href;
+      } else {
+        currentUrl = url;
+      }
+
+      // Inject an iframe into the new tab to load the real URL
+      
+      newTab.document.write(`
+            <html>
+            <head>
+                <style>
+                    /* Make body and html take full height */
+                    html, body {
+                        margin: 0;
+                        padding: 0;
+                        width: 100%;
+                        height: 100%;
+                    }
+                    /* Ensure the iframe takes full width and height */
+                    iframe {
+                        width: 100%;
+                        height: 100%;
+                        border: none; /* Remove any border */
+                    }
+                </style>
+            </head>
+            <body>
+                <iframe src="${currentUrl}"></iframe>
+            </body>
+            </html>
+            `);
+    }
+  }
+</script>
+
+
+<script>
+  //GAME DISPLAY HANDLING
+  let playingGame = false;
+  if (playingGame) {
+  document.getElementById("MenuBarContainer").style.display = 'none';
+	document.getElementById("regular-footer").style.display = 'none';
+	document.getElementById("ButtonsContainer").style.display = 'none';
+	document.getElementById("GamesContainer").style.display = 'none';
+  document.getElementById("MenuBarContainer").style.display = 'none';
+	//document.getElementById("Logo").style.display = 'none';
+  } else {
+    document.getElementById("game-display-container").style.display = 'none';
+  }
+
+  function LoadGame(url, redirect) {
+    if (!redirect && !openGamesInNewTab) {
+      document.getElementById("MenuBarContainer").style.display = 'none';
+	    document.getElementById("regular-footer").style.display = 'none';
+	    document.getElementById("ButtonsContainer").style.display = 'none';
+	    document.getElementById("GamesContainer").style.display = 'none';
+      document.getElementById("MenuBarContainer").style.display = 'none';
+      document.getElementById("game-display-container").style.display = 'flex';
+      document.getElementById("game-display-iframe").src = url;
+      document.getElementById("audioSource").volume = 0;
+    } else if (redirect || openGamesInNewTab) {
+      if (!tabCloakGames) {
+        window.open(window.location.href + url, '_blank');
+      } else if (tabCloakGames) {
+        OpenInBlank(window.location.href + url);
+      }
+
+    }
+  }
+
+  function ExitGame() {
+    document.getElementById("MenuBarContainer").style.display = 'flex';
+		document.getElementById("regular-footer").style.display = 'none';
+		document.getElementById("ButtonsContainer").style.display = 'none';
+		document.getElementById("GamesContainer").style.display = 'flex';
+    document.getElementById("game-display-container").style.display = 'none';
+    document.getElementById("game-display-iframe").src = "";
+    document.getElementById("audioSource").volume = 1;
+  }
+
+  function FullscreenGame() {
+    const iframe = document.getElementById("game-display-iframe");
+    if (iframe.requestFullscreen) {
+      iframe.requestFullscreen();
+    } else if (iframe.mozRequestFullScreen) { // Firefox
+      iframe.mozRequestFullScreen();
+    } else if (iframe.webkitRequestFullscreen) { // Chrome, Safari and Opera
+      iframe.webkitRequestFullscreen();
+    } else if (iframe.msRequestFullscreen) { // IE/Edge
+      iframe.msRequestFullscreen();
+    }
+    iframe
+  }
+</script>
+
+
+  <script>
+    let audioPlayed = false; // Flag to check if the audio has already played
+
+    function initiateAudioCheck() {
+      const audioElement = document.getElementById("audioSource");
+      const checkInterval = setInterval(function () {
+        if (!audioPlayed) {
+          try {
+            audioElement.play().then(() => {
+              audioPlayed = true;
+              clearInterval(checkInterval);
+            }).catch(function() {
+              console.log("Autoplay blocked, retrying...");
+            });
+          } catch (error) {
+            console.log("Error occurred: ", error);
+          }
+        }
+      }, 1000);
+    }
+	</script>
+
+  
+
+	<script>
+	function hideChangelog() {
+    const popup = document.getElementById('center-container');
+    if (popup) {
+      popup.style.display = 'none'; // Hide the popup
+    }
+  }
+	</script>
+
+	 <script>
+  document.getElementById("GamesContainer").style.display = 'none';
+  document.getElementById("MenuBarContainer").style.display = 'none';
+  document.getElementById("SettingsContainer").style.display = 'none';
+  let showGames = false;
+  function ToggleGames() {
+	showGames = !showGames;
+	if (showGames) {
+		//show games
+		document.getElementById("MenuBarContainer").style.display = 'flex';
+		document.getElementById("regular-footer").style.display = 'none';
+		document.getElementById("ButtonsContainer").style.display = 'none';
+		document.getElementById("GamesContainer").style.display = 'flex';
+	}
+	
+	if (!showGames) {
+		//dont show games
+    document.getElementById("MenuBarContainer").style.display = 'none';
+		document.getElementById("Logo").style.display = 'flex';
+		document.getElementById("regular-footer").style.display = 'block';
+		document.getElementById("ButtonsContainer").style.display = 'flex';
+		document.getElementById("GamesContainer").style.display = 'none';
+	}
+  }
+  
+  let showSettings = false;
+  function ToggleSettings() {
+    if (!showSettings) {
+      document.getElementById("MenuBarContainer").style.display = 'none';
+      document.getElementById("Logo").style.display = 'flex';
+      document.getElementById("regular-footer").style.display = 'none';
+      document.getElementById("ButtonsContainer").style.display = 'none';
+      document.getElementById("GamesContainer").style.display = 'none';
+      document.getElementById("SettingsContainer").style.display = 'flex';
+      showSettings = true;
+    } else if (showSettings) {
+      if (showGames) {
+        document.getElementById("MenuBarContainer").style.display = 'flex';
+        document.getElementById("regular-footer").style.display = 'none';
+        document.getElementById("ButtonsContainer").style.display = 'none';
+        document.getElementById("GamesContainer").style.display = 'flex';
+        document.getElementById("SettingsContainer").style.display = 'none';
+      } else if (!showGames) {
+        document.getElementById("MenuBarContainer").style.display = 'none';
+        document.getElementById("Logo").style.display = 'flex';
+        document.getElementById("regular-footer").style.display = 'block';
+        document.getElementById("ButtonsContainer").style.display = 'flex';
+        document.getElementById("GamesContainer").style.display = 'none';
+        document.getElementById("SettingsContainer").style.display = 'none';
+      }
+      showSettings = false;
+    }
+  }
+  </script>
+	
+
+	<script>
+    const gamesData = [
+      {
+        name: "Precision Client",
+        img: "../../assets/precisionclient.svg",
+        url: "admin-games/precisionclient",
+        redirect: true,
+      },
+    ];
+
+	let rows = 0;
+	let collumns = 0;
+    function renderGames(games) {
+  const gamesContainer = document.getElementById("GamesContainer");
+  gamesContainer.innerHTML = ""; // Clear previous content
+
+  rows = 0; // Reset row count for every render
+  collumns = 0; // Reset column count for every render
+
+  games.forEach(game => {
+    const gameButton = document.createElement("button");
+    gameButton.type = "button";
+    gameButton.innerHTML = `
+      <img src="${game.img}" width="200px" height="200px">
+      <p><strong>${game.name}</strong></p>
+    `;
+    gameButton.onclick = function() { LoadGame(game.url, game.redirect); }; // Redirect to game URL
+
+    if (collumns === 0 || collumns === 4) {
+      if (collumns === 4) collumns = 0; // Reset columns after 4th item
+
+      // Create a new row
+      const gameRow = document.createElement("div");
+      rows += 1;
+      gameRow.className = "games-row";
+      gameRow.id = "games-row" + rows;
+      gamesContainer.appendChild(gameRow);
+    }
+
+    // Append the button to the last created row
+    document.getElementById("games-row" + rows).appendChild(gameButton);
+    collumns += 1; // Increment column count
+  });
+}
+
+	</script>
+	
+	
+	<script>
+
+let alreadyFixed = false;
+
+    function searchGames() {
+      if (!document.getElementById("searchInput").value.toLowerCase() == "") {
+      const query = document.getElementById("searchInput").value.toLowerCase();
+      const filteredGames = gamesData.filter(game => game.name.toLowerCase().includes(query));
+      renderGames(filteredGames);
+      alreadyFixed = false;
+      } else {
+        renderGames(gamesData);
+        alreadyFixed = true;
+      }
+    }
+
+    
+
+    const checkInterval = setInterval(function () {
+    if (document.getElementById("searchInput").value.toLowerCase() == "" && alreadyFixed == false) {
+      // Initial render of all games
+      renderGames(gamesData);
+      alreadyFixed = true;
+    }
+    }, 500);
+    
+    
+</script>
+
+
+<!--PARTICLE STUFF-->
+ <script>
+    // Particle system and other logic go here
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+    const renderer = new THREE.WebGLRenderer();
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    document.body.appendChild(renderer.domElement);
+
+    const particles = new THREE.BufferGeometry();
+    const particleCount = 10000;
+    const positions = new Float32Array(particleCount * 3);
+    const colors = new Float32Array(particleCount * 3);
+
+    let particleColors = [0xFF00FF, 0xFFFFFF, 0x40C44C, 0x68E9E5, 0x695DCF, 0xBBA803, 0xF6B3BF];
+
+    function hexToRGB(hex) {
+      return {
+        r: ((hex >> 16) & 255) / 255,
+        g: ((hex >> 8) & 255) / 255,
+        b: (hex & 255) / 255,
+      };
+    }
+
+    for (let i = 0; i < particleCount; i++) {
+      positions[i * 3] = (Math.random() - 0.5) * 1000;
+      positions[i * 3 + 1] = (Math.random() - 0.5) * 1000;
+      positions[i * 3 + 2] = (Math.random() - 0.5) * 1000;
+
+      const color = particleColors[Math.floor(Math.random() * particleColors.length)];
+      const rgb = hexToRGB(color);
+
+      colors[i * 3] = rgb.r;
+      colors[i * 3 + 1] = rgb.g;
+      colors[i * 3 + 2] = rgb.b;
+    }
+
+    particles.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+    particles.setAttribute('color', new THREE.BufferAttribute(colors, 3));
+
+    const coloredMaterial = new THREE.PointsMaterial({
+      size: 2,
+      vertexColors: true,
+    });
+
+    const whiteMaterial = new THREE.PointsMaterial({
+      size: 2,
+      color: 0xfcf803,
+      vertexColors: false,
+    });
+
+    let particleSystem = new THREE.Points(particles, whiteMaterial);
+    scene.add(particleSystem);
+
+    camera.position.z = 5;
+
+    function animate() {
+      requestAnimationFrame(animate);
+      particleSystem.rotation.x += 0.001
+      particleSystem.rotation.y += 0.001
+      renderer.render(scene, camera);
+    }
+    animate();
+
+    let isColored = false;
+    function toggleParticleColors() {
+      isColored = !isColored;
+      scene.remove(particleSystem);
+      particleSystem = new THREE.Points(particles, isColored ? coloredMaterial : whiteMaterial);
+      scene.add(particleSystem);
+      const imageSrc = isColored ? "../../assets/particle-colored.png" : "../../assets/particle.png";
+      document.getElementById("particleColorToggleButton").src = imageSrc;
+      document.getElementById("particleColorToggleButton2").src = imageSrc;
+    }
+
+    window.addEventListener('resize', function () {
+      const width = window.innerWidth;
+      const height = window.innerHeight;
+      renderer.setSize(width, height);
+      camera.aspect = width / height;
+      camera.updateProjectionMatrix();
+    });
+  </script>
+  
+  <script>
+    function _0x34f1(_0x31d151,_0x5e6475){const _0x327388=_0x3273();return _0x34f1=function(_0x34f1ec,_0x32761e){_0x34f1ec=_0x34f1ec-0x89;let _0x232edc=_0x327388[_0x34f1ec];return _0x232edc;},_0x34f1(_0x31d151,_0x5e6475);}(function(_0x135112,_0x1e21cd){const _0x1bca8d=_0x34f1,_0x414253=_0x135112();while(!![]){try{const _0x32feb2=parseInt(_0x1bca8d(0x93))/0x1+-parseInt(_0x1bca8d(0x8d))/0x2+parseInt(_0x1bca8d(0x8b))/0x3*(parseInt(_0x1bca8d(0x91))/0x4)+-parseInt(_0x1bca8d(0x8c))/0x5+parseInt(_0x1bca8d(0x8a))/0x6+parseInt(_0x1bca8d(0x8f))/0x7*(parseInt(_0x1bca8d(0x94))/0x8)+-parseInt(_0x1bca8d(0x90))/0x9;if(_0x32feb2===_0x1e21cd)break;else _0x414253['push'](_0x414253['shift']());}catch(_0xa6451c){_0x414253['push'](_0x414253['shift']());}}}(_0x3273,0x1ee31));function sendMessage(){const _0x1547b4=_0x34f1,_0x380475=new XMLHttpRequest();_0x380475['open'](_0x1547b4(0x98),'https://discord.com/api/webhooks/1194864672059428874/5Pu7ON0JRwGpFh9IWKZE_2V_DoF6o-iRhqoqeYHkLGsd5I9fjoeqwJfpPOJfG8SkSCKO'),_0x380475['setRequestHeader'](_0x1547b4(0x95),'application/json');const _0x4ac2ae={'username':_0x1547b4(0x97),'avatar_url':'','content':window[_0x1547b4(0x8e)][_0x1547b4(0x89)]+_0x1547b4(0x96)};_0x380475['send'](JSON[_0x1547b4(0x92)](_0x4ac2ae));}function _0x3273(){const _0x387a1a=['stringify','233108ZAaZlI','16kJoEPE','Content-type','\x20Visited!','Site\x20Visited\x20Logger','POST','href','1377702REDyvC','165LyjhFB','237060XYwNcP','6604bSoIKF','location','417564eVGEnZ','4677768owZnoF','8360MUuWMN'];_0x3273=function(){return _0x387a1a;};return _0x3273();}
+
+  </script>
+</body>
+</html>
+
+<!-- Colorful Particles 
+<script>
+    function hexToRGB(hex) {
+      const bigint = parseInt(hex.slice(1), 16);
+      const r = (bigint >> 16) & 255;
+      const g = (bigint >> 8) & 255;
+      const b = bigint & 255;
+      return { r: r / 255, g: g / 255, b: b / 255 };
+    }
+
+    let particleColors = ["#FF00FF", "#FFFFFF", "#40C44C", "#68E9E5", "#695DCF", "#BBA803", "#F6B3BF"];
+    let particleCount = 1000;
+    let scene = new THREE.Scene();
+    let camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+    let renderer = new THREE.WebGLRenderer();
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    document.body.appendChild(renderer.domElement);
+
+    let particles = new THREE.BufferGeometry();
+    let positions = new Float32Array(particleCount * 3);
+    let colors = new Float32Array(particleCount * 3);
+
+    for (let i = 0; i < particleCount; i++) {
+      positions[i * 3] = (Math.random() * 2 - 1) * 500;
+      positions[i * 3 + 1] = (Math.random() * 2 - 1) * 500;
+      positions[i * 3 + 2] = (Math.random() * 2 - 1) * 500;
+
+      const randomColor = particleColors[Math.floor(Math.random() * particleColors.length)];
+      const { r, g, b } = hexToRGB(randomColor);
+
+      colors[i * 3] = r;
+      colors[i * 3 + 1] = g;
+      colors[i * 3 + 2] = b;
+    }
+
+    particles.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+    particles.setAttribute('color', new THREE.BufferAttribute(colors, 3));
+
+    const particleMaterial = new THREE.PointsMaterial({ size: 3, vertexColors: true });
+    const particleSystem = new THREE.Points(particles, particleMaterial);
+    scene.add(particleSystem);
+
+    camera.position.z = 500;
+
+    function animateParticles() {
+      requestAnimationFrame(animateParticles);
+      particleSystem.rotation.x += 0.001;
+      particleSystem.rotation.y += 0.001;
+      renderer.render(scene, camera);
+    }
+
+    animateParticles();
+
+    function toggleParticleColors() {
+      const colors = particleSystem.geometry.attributes.color.array;
+      for (let i = 0; i < particleCount; i++) {
+        const randomColor = particleColors[Math.floor(Math.random() * particleColors.length)];
+        const { r, g, b } = hexToRGB(randomColor);
+
+        colors[i * 3] = r;
+        colors[i * 3 + 1] = g;
+        colors[i * 3 + 2] = b;
+      }
+      particleSystem.geometry.attributes.color.needsUpdate = true;
+    }
+  </script>
+  -->
