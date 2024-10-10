@@ -320,7 +320,15 @@ const gamesToCache = [
     'games/slope/slope_newwasmcode.unityweb',
     'games/slope/slope_newwasmframework.unityweb',
     'games/slope/UnityLoader.js',
-    'games/slope/UnityProgress.js'
+    'games/slope/UnityProgress.js',
+    'games/sm64/emulator-sm64.html',
+    'games/sm64/index.html',
+    'games/sm64/sm64.z64',
+    'games/sm64/logo.png',
+    'games/sm64/sm64.us.f3dex2e.html.zip',
+    'games/sm64/sm64.us.f3dex2e.js',
+    'games/sm64/sm64.us.f3dex2e.wasm',
+    'games/sm64/sm64.us.f3dex2e.wasm.map'
 ];
 
 // Install event
