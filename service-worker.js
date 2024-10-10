@@ -1,4 +1,6 @@
 const CACHE_NAME_ASSETS = 'offline-assets-v2';
+const CACHE_NAME_GAMES = 'offline-games-v2';
+
 const assetsToCache = [
     '/index.html',
     '/main.css',
@@ -224,7 +226,6 @@ const assetsToCache = [
 
 ];
 
-const CACHE_NAME_GAMES = 'offline-games-v2';
 const gamesToCache = [
     'service-worker.js',
     'register-service-workers.js',
@@ -426,35 +427,65 @@ const gamesToCache = [
     'games/worldshardestgame3/worldshardestgame3.html',
 ];
 
-// Install event
-self.addEventListener('install', event => {
+// Install event - cache assets and games
+self.addEventListener('install', (event) => {
     event.waitUntil(
-        Promise.all([
-            // Cache assets
-            caches.open(CACHE_NAME_ASSETS)
-                .then(cache => {
-                    console.log('Opened assets cache');
-                    return cache.addAll(assetsToCache);
-                }),
-            // Cache games
-            caches.open(CACHE_NAME_GAMES)
-                .then(cache => {
-                    console.log('Opened games cache');
-                    return cache.addAll(gamesToCache);
-                })
-        ])
+        caches.open(CACHE_NAME_ASSETS).then((cache) => {
+            return cache.addAll(assetsToCache);
+        })
+    );
+    event.waitUntil(
+        caches.open(CACHE_NAME_GAMES).then((cache) => {
+            return cache.addAll(gamesToCache);
+        })
     );
 });
 
-// Fetch event
-self.addEventListener('fetch', event => {
+// Activate event - clean up old caches
+self.addEventListener('activate', (event) => {
+    const cacheWhitelist = [CACHE_NAME_ASSETS, CACHE_NAME_GAMES];
+    event.waitUntil(
+        caches.keys().then((cacheNames) => {
+            return Promise.all(
+                cacheNames.map((cacheName) => {
+                    if (!cacheWhitelist.includes(cacheName)) {
+                        return caches.delete(cacheName);
+                    }
+                })
+            );
+        })
+    );
+});
+
+// Fetch event - respond with cached resources or fetch from network
+self.addEventListener('fetch', (event) => {
     event.respondWith(
-        caches.match(event.request)
-            .then(response => {
-                if (response) {
-                    return response;  // Return cached asset
+        caches.match(event.request).then((response) => {
+            // Return cached response if found
+            if (response) {
+                return response;
+            }
+
+            // If not in cache, try to fetch from the network
+            return fetch(event.request).then((networkResponse) => {
+                // Check if we received a valid response
+                if (!networkResponse || networkResponse.status !== 200 || networkResponse.type !== 'basic') {
+                    return networkResponse;
                 }
-                return fetch(event.request);  // Fetch from network
-            })
+
+                // Clone the response before caching
+                const responseToCache = networkResponse.clone();
+
+                // Cache the new response
+                caches.open(CACHE_NAME_ASSETS).then((cache) => {
+                    cache.put(event.request, responseToCache);
+                });
+
+                return networkResponse;
+            });
+        }).catch(() => {
+            // Fallback response if offline
+            return caches.match('/index.html'); // Return the index.html or a custom offline page
+        })
     );
 });
