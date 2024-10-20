@@ -28,6 +28,8 @@ Feel free to fork this project and submit pull requests. Please share and star t
 
 ## Star History
 
+## Star History
+
 <a href="https://star-history.com/#Obsidian-ig/ObsidiansUnblockedRevamped&Date">
  <picture>
    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=Obsidian-ig/ObsidiansUnblockedRevamped&type=Date&theme=dark" />
