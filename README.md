@@ -25,8 +25,7 @@ Host Obsidians Unblocked Revamped Yourself:
 
 ## Contributing  
 Feel free to fork this project and submit pull requests. Another way to contribute to my project that would help motivate me to keep working on it is staring the project and sharing it with any friends you know of that might be interested! Or you could also join the discord!
-[![Join the Discord!](https://discord.com/widget?id=1194838545492349009&theme=dark)
-<iframe src="https://discord.com/widget?id=1194838545492349009&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+[![Join the Discord!]()](https://discord.gg/8D8mVEE2v4)
 
 
 ## Star History
