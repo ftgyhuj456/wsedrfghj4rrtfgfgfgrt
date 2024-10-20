@@ -3,13 +3,20 @@
 ---
 
 ## About  
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.  
+Obsidians Unblocked Revamped is a almost complete remake of my old website Obsidians Unblocked. I completely re-coded pretty much everything in it. There is now many new features in it, such as: tab-cloaking, search for games, dynamic game loading, all one page, cookies support, simple and clean ui, better page design, and a lot more minor changes to improve the website. I am the only developer of this website currently so it isn't the best not going to lie, but I am proud of what I have created, I spent my time working on this website and it has become a memorable part of my life. It was so popular at my school at one point until recently, that the staff actually had a meeting about it lmao.
 
 ## Features  
 - Easily accessible online games  
-- Bookmark and favorite your favorite games  
 - Customizable settings  
 - User-friendly interface
+- Updated regularly
+- Tab cloaking
+- Game cloaking
+- "Unique" design
+- Dynamic game loading
+- Cookie support for settings
+- Easy to edit yourself
+- More To Come!
 
 ## Hosting  
 Host Obsidians Unblocked Revamped Yourself:  
@@ -17,7 +24,7 @@ Host Obsidians Unblocked Revamped Yourself:
 
 
 ## Contributing  
-Feel free to fork this project and submit pull requests. Make sure to follow our contribution guidelines.
+Feel free to fork this project and submit pull requests.
 
 ## License  
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
