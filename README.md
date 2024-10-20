@@ -24,7 +24,7 @@ Host Obsidians Unblocked Revamped Yourself:
 
 
 ## Contributing  
-Feel free to fork this project and submit pull requests. Please like and star the project <3
+Feel free to fork this project and submit pull requests. Please share and star the project <3
 
 
 ## License  
