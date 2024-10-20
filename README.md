@@ -26,7 +26,15 @@ Host Obsidians Unblocked Revamped Yourself:
 ## Contributing  
 Feel free to fork this project and submit pull requests. Please share and star the project <3
 
-[![Star History Chart](https://api.star-history.com/svg?repos=Obsidian-ig/ObsidiansUnblockedRevamped&type=Date)](https://star-history.com/#Obsidian-ig/ObsidiansUnblockedRevamped&Date)
+## Star History
+
+<a href="https://star-history.com/#Obsidian-ig/ObsidiansUnblockedRevamped&Date">
+ <picture>
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=Obsidian-ig/ObsidiansUnblockedRevamped&type=Date&theme=dark" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=Obsidian-ig/ObsidiansUnblockedRevamped&type=Date" />
+   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=Obsidian-ig/ObsidiansUnblockedRevamped&type=Date" />
+ </picture>
+</a>
 
 ## License  
 This project is licensed under a modified MIT License, which restricts commercial use. See the [LICENSE](LICENSE) file for details.
