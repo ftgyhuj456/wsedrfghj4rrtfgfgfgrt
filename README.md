@@ -20,7 +20,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor i
 This project is hosted on several platforms:  
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=repository_url)
-- **Vercel**: [https://vercel.com](https://obsidiansunblockedrevamped.vercel.app)  
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fvercel%2Fnext.js%2Ftree%2Fcanary%2Fexamples%2Fhello-world)
 - **Render**: [https://render.com](https://obsidiansunblockedrevamped.onrender.com)
 
 ## Contributing  
