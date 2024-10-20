@@ -19,7 +19,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor i
 ## Hosting  
 This project is hosted on several platforms:  
 
-- **Netlify**: [https://netlify.com](https://obsidiansunblockedrevamped.netlify.app)  
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=repository_url)
 - **Vercel**: [https://vercel.com](https://obsidiansunblockedrevamped.vercel.app)  
 - **Render**: [https://render.com](https://obsidiansunblockedrevamped.onrender.com)
 
