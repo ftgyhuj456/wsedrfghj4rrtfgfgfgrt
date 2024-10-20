@@ -27,5 +27,5 @@ Host Obsidians Unblocked Revamped Yourself:
 Feel free to fork this project and submit pull requests.
 
 ## License  
-This project is licensed under a modified MIT License, which restricts both commercial and private use. See the [LICENSE](LICENSE) file for details.
+This project is licensed under a modified MIT License, which restricts commercial use. See the [LICENSE](LICENSE) file for details.
 
