@@ -39,6 +39,10 @@ Feel free to fork this project and submit pull requests. Another way to contribu
  </picture>
 </a>
 
+## Thanks!
+- Big thanks to the Seraph! it would have taken me decades to find all of the games to use. So I thought I would give credits for the games!
+[Seraph Unblocked Games Repo](https://github.com/a456pur/seraph) Give it a star <3
+
 ## License  
 This project is licensed under a modified MIT License, which restricts commercial use. See the [LICENSE](LICENSE) file for details.
 
