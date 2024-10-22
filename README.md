@@ -40,7 +40,7 @@ Feel free to fork this project and submit pull requests. Another way to contribu
 </a>
 
 ## Thanks!
-- Big thanks to the Seraph! it would have taken me decades to find all of the games to use. So I thought I would give credits for the games!
+- Big thanks to Seraph! it would have taken me decades to find all of the games to use. So I thought I would give credits for the games!
 [Seraph Unblocked Games Repo](https://github.com/a456pur/seraph) Give it a star <3
 
 ## License  
