@@ -267,9 +267,9 @@ border-radius: 20px;
      .settings-popup {
        background-color: #0e0e0e;
        padding: 20px;
-       width: 35vw;
+       width: 45vw;
        /* 35% of the viewport width */
-       max-height: 35vh;
+       max-height: 50vh;
        /* 35% of the viewport height */
        overflow-y: auto;
        border-style: inset;
@@ -285,6 +285,8 @@ border-radius: 20px;
        /* Center horizontally */
        transform: translate(-50%, -50%);
        /* Adjusts to perfectly center */
+       height: 40vh;
+       
      }
   
      /* Custom scrollbar styles for WebKit browsers */
@@ -331,3 +333,38 @@ canvas {
     pointer-events: none; /* Prevents interactions with the canvas */
 }
 
+.SettingsButtonsContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: left;
+  align-content: left;
+  width: 100%;
+  height: auto;
+  gap: 10px;
+}
+
+.settingsButton {
+  background-color: #0e0e0e; 
+  border-style: ridge;
+  width: 35%;
+  height: 200px;
+  padding: 5%;
+  border-radius: 15px;
+  border-color: white;
+  border-width: 3px;
+}
+
+.settingsButton:hover {
+  scale: 103%;
+}
+
+.settingsButtonEnabled {
+  background-color: rgba(18, 107, 0, 0.5); /* Green with 50% transparency */
+  color: white; /* Set text color as needed */
+}
+
+.settingsButtonDisabled {
+  background-color: rgba(136, 0, 0, 0.5); /* Red with 50% transparency */
+  color: white; /* Set text color as needed */
+}

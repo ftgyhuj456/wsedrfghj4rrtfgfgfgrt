@@ -38,7 +38,8 @@ function ToggleOpenGamesInNewTab() {
 // Update button text based on setting
 function updateOpenGamesInNewTabToggleButton() {
   const button = document.getElementById("openGamesInNewTabToggleButton");
-  button.innerText = openGamesInNewTab ? "Enabled" : "Disabled";
+  button.innerText = openGamesInNewTab ? "Open games & changes in new tab: Enabled" : "Open games & changes in new tab: Disabled";
+  button.className = openGamesInNewTab ? "settingsButton settingsButtonEnabled" : "settingsButton settingsButtonDisabled";
 }
 
 function ToggleTabCloakGames() {
@@ -49,7 +50,8 @@ function ToggleTabCloakGames() {
 
 function updateTabCloakGamesToggleButton() {
   const button = document.getElementById("tabCloakGamesToggleButton");
-  button.innerText = tabCloakGames ? "Enabled" : "Disabled";
+  button.innerText = tabCloakGames ? "Tab cloak games & changes: Enabled" : "Tab cloak games & changes: Disabled";
+  button.className = tabCloakGames ? "settingsButton settingsButtonEnabled" : "settingsButton settingsButtonDisabled";
 }
 
 // Load settings when the page is loaded
@@ -616,20 +618,26 @@ const gamesData = [
   },
   {
     name: "Run",
-    img: "assets/run.avif",
-    url: "games/run/run.html",
+    img: "assets/run.jpg",
+    url: "games/run/index.html",
     redirect: false,
   },
   {
     name: "Run 2",
     img: "assets/run2.jpg",
-    url: "games/run2/run2.html",
+    url: "games/run2/index.html",
     redirect: false,
   },
   {
     name: "Run 3",
     img: "assets/run3.jpg",
-    url: "games/run3/run3.html",
+    url: "games/run3/index.html",
+    redirect: false,
+  },
+  {
+    name: "Run 3 Plus",
+    img: "assets/run3.jpg",
+    url: "games/run3plus/index.html",
     redirect: false,
   },
   {
@@ -1011,6 +1019,12 @@ const gamesData = [
     redirect: false,
   },
   {
+    name: "Breaking The Bank",
+    img: "assets/breakingthebank.png",
+    url: "games/breakingthebank/index.html",
+    redirect: false,
+  },
+  {
     name: "Escaping The Prison",
     img: "assets/escapingtheprison.jfif",
     url: "games/escapingtheprison/index.html",
@@ -1381,7 +1395,314 @@ const gamesData = [
     url: "games/defendthetank/index.html",
     redirect: false,
   },
+  {
+    name: "Sort The Court",
+    img: "assets/sortthecourt.png",
+    url: "games/sortthecourt/index.html",
+    redirect: false,
+  },
+  {
+    name: "This is the Only Level",
+    img: "assets/thisistheonlylevel.jpg",
+    url: "games/thisistheonlylevel/index.html",
+    redirect: false,
+  },
+  {
+    name: "Battle Ships",
+    img: "assets/battleships.avif",
+    url: "games/battleships/index.html",
+    redirect: false,
+  },
+  {
+    name: "Line Rider",
+    img: "assets/linerider.jpg",
+    url: "games/linerider/index.html",
+    redirect: false,
+  },
+  {
+    name: "Mario Combat",
+    img: "assets/mariocombat.jpg",
+    url: "games/mariocombat/index.html",
+    redirect: false,
+  },
+  {
+    name: "Space Invaders",
+    img: "assets/spaceinvaders.jpg",
+    url: "games/spaceinvaders/index.html",
+    redirect: false,
+  },
+  {
+    name: "Animal Crossing Wild World",
+    img: "assets/animalcrossing.png",
+    url: "games/animalcrossingwildworld/index.html",
+    redirect: false,
+  },
+  {
+    name: "Mario Kart DS",
+    img: "assets/mariokartds.jpg",
+    url: "games/mariokartds/index.html",
+    redirect: false,
+  },
+  {
+    name: "Nintendogs",
+    img: "assets/nintendogs.png",
+    url: "games/nintendogs/index.html",
+    redirect: false,
+  },
+  {
+    name: "Roof Top Snipers 2",
+    img: "assets/rooftopsnipers2.jpg",
+    url: "games/rooftop2/index.html",
+    redirect: false,
+  },
+  {
+    name: "Fire Boy And Water Girl",
+    img: "assets/fireboyandwatergirl.png",
+    url: "games/fireboywatergirl/index.html",
+    redirect: false,
+  },
+  {
+    name: "Chibi Knight",
+    img: "assets/chibiknight.jpg",
+    url: "games/chibiknight/index.html",
+    redirect: false,
+  },
+  {
+    name: "Cluster Rush",
+    img: "assets/clusterrush.png",
+    url: "games/clusterrush/index.html",
+    redirect: false,
+  },
+  {
+    name: "Doodle Defender",
+    img: "assets/doodledefender.png",
+    url: "games/doodledefender/index.html",
+    redirect: false,
+  },
+  {
+    name: "Unfair Mario",
+    img: "assets/unfairmario.jpg",
+    url: "games/unfairmario/index.html",
+    redirect: false,
+  },
+  {
+    name: "Boxing Physics 2",
+    img: "assets/boxingphysics2.jpg",
+    url: "games/boxingphysics2/index.html",
+    redirect: false,
+  },
+  {
+    name: "Ace Attorney",
+    img: "assets/aceattorney.png",
+    url: "games/aceattorney/index.html",
+    redirect: false,
+  },
+  {
+    name: "Metal Gear Solid",
+    img: "assets/metalgearsolid.jpg",
+    url: "games/metalgearsolid/index.html",
+    redirect: false,
+  },
+  {
+    name: "Mother 3",
+    img: "assets/mother3.jpg",
+    url: "games/mother3/index.html",
+    redirect: false,
+  },
+  {
+    name: "Advance Wars",
+    img: "assets/advancewars.jpg",
+    url: "games/advancewars/index.html",
+    redirect: false,
+  },
+  {
+    name: "Advance Wars 2",
+    img: "assets/advancewars2.jpg",
+    url: "games/advancewars2/index.html",
+    redirect: false,
+  },
+  {
+    name: "Advance Wars Days Of Ruin",
+    img: "assets/advancewarsdaysofruin.jpg",
+    url: "games/advancewarsdaysofruin/index.html",
+    redirect: false,
+  },
+  {
+    name: "Banjo Pilot",
+    img: "assets/banjopilot.jpg",
+    url: "games/banjopilot/index.html",
+    redirect: false,
+  },
+  {
+    name: "Super Monkey Ball Jr",
+    img: "assets/supermonkeyballjr.png",
+    url: "games/supermonkeyballjr/index.html",
+    redirect: false,
+  },
+  {
+    name: "Tiny Fishing",
+    img: "assets/tinyfishing.png",
+    url: "games/tinyfishing/index.html",
+    redirect: false,
+  },
+  {
+    name: "Big Red Button",
+    img: "assets/bigredbutton.jpg",
+    url: "games/bigredbutton/index.html",
+    redirect: false,
+  },
+  {
+    name: "Achievement Unlocked",
+    img: "assets/achievementunlocked.jpg",
+    url: "games/achievementunlocked/index.html",
+    redirect: false,
+  },
+  {
+    name: "Achievement Unlocked 2",
+    img: "assets/achievementunlocked2.jpg",
+    url: "games/achievementunlocked2/index.html",
+    redirect: false,
+  },
+  {
+    name: "Achievement Unlocked 3",
+    img: "assets/achievementunlocked3.jpg",
+    url: "games/achievementunlocked3/index.html",
+    redirect: false,
+  },
+  {
+    name: "Kirby Mass Attack",
+    img: "assets/kirbymassattack.jpg",
+    url: "games/kirbymassattack/index.html",
+    redirect: false,
+  },
+  {
+    name: "Sonic Advance",
+    img: "assets/sonicadvance.jpg",
+    url: "games/sonicadvance/index.html",
+    redirect: false,
+  },
+  {
+    name: "Sonic Advance 2",
+    img: "assets/sonicadvance2.png",
+    url: "games/sonicadvance2/index.html",
+    redirect: false,
+  },
+  {
+    name: "Worms World Party",
+    img: "assets/wormsworldparty.jpg",
+    url: "games/wormsworldparty/index.html",
+    redirect: false,
+  },
+  {
+    name: "Bad Ice Cream",
+    img: "assets/badicecream.jpg",
+    url: "games/badicecream/index.html",
+    redirect: false,
+  },
+  {
+    name: "Bad Ice Cream 2",
+    img: "assets/badicecream2.jpg",
+    url: "games/badicecream2/index.html",
+    redirect: false,
+  },
+  {
+    name: "Bad Ice Cream 3",
+    img: "assets/badicecream3.png",
+    url: "games/badicecream3/index.html",
+    redirect: false,
+  },
+  {
+    name: "Adventure Capitalist",
+    img: "assets/adventurecapitalist.jpg",
+    url: "games/adventurecapitalist/index.html",
+    redirect: false,
+  },
+  {
+    name: "Monkey Mart",
+    img: "assets/monkeymart.png",
+    url: "games/monkeymart/index.html",
+    redirect: false,
+  },
+  {
+    name: "Banjo Kazooie",
+    img: "assets/banjokazooie.jpg",
+    url: "games/banjokazooie/index.html",
+    redirect: false,
+  },
+  {
+    name: "Donkey Kong 64",
+    img: "assets/donkeykong64.jpg",
+    url: "games/donkeykong64/index.html",
+    redirect: false,
+  },
+  {
+    name: "F-Zero",
+    img: "assets/fzero.jpg",
+    url: "games/fzero/index.html",
+    redirect: false,
+  },
+  {
+    name: "F-Zero X",
+    img: "assets/fzerox.jpg",
+    url: "games/fzerox/index.html",
+    redirect: false,
+  },
+  {
+    name: "Kirby 64",
+    img: "assets/kirby64.jpg",
+    url: "games/kirby64/index.html",
+    redirect: false,
+  },
+  {
+    name: "Mario Kart 64",
+    img: "assets/mariokart64.jpg",
+    url: "games/mariokart64/index.html",
+    redirect: false,
+  },
+  {
+    name: "Mario Party",
+    img: "assets/marioparty.jpg",
+    url: "games/marioparty/index.html",
+    redirect: false,
+  },
+  {
+    name: "Mario Party 2",
+    img: "assets/marioparty2.jpg",
+    url: "games/marioparty2/index.html",
+    redirect: false,
+  },
+  {
+    name: "Mario Party 3",
+    img: "assets/marioparty3.jpg",
+    url: "games/marioparty3/index.html",
+    redirect: false,
+  },
+  {
+    name: "Mario Party Advance",
+    img: "assets/mariopartyadvance.jpg",
+    url: "games/mariopartyadvance/index.html",
+    redirect: false,
+  },
+  {
+    name: "Mario Party DS",
+    img: "assets/mariopartyds.jpg",
+    url: "games/mariopartyds/index.html",
+    redirect: false,
+  },
+  {
+    name: "Ocarina Of Time",
+    img: "assets/ocarinaoftime.jpg",
+    url: "games/ocarinaoftime/index.html",
+    redirect: false,
+  },
+  {
+    name: "Star Fox 64",
+    img: "assets/starfox64.jpg",
+    url: "games/starfox64/index.html",
+    redirect: false,
+  },
 ];
+
 
 let rows = 0;
 let collumns = 0;
@@ -1421,6 +1742,10 @@ function renderGames(games) {
 }
 
 const changesData = [
+  {
+    version: "2.1.6",
+    url: "changes/2.1.6.html"
+  },
   {
     version: "2.1.5",
     url: "changes/2.1.5.html",
