@@ -38,8 +38,12 @@ function ToggleOpenGamesInNewTab() {
 // Update button text based on setting
 function updateOpenGamesInNewTabToggleButton() {
   const button = document.getElementById("openGamesInNewTabToggleButton");
-  button.innerText = openGamesInNewTab ? "Open games & changes in new tab: Enabled" : "Open games & changes in new tab: Disabled";
-  button.className = openGamesInNewTab ? "settingsButton settingsButtonEnabled" : "settingsButton settingsButtonDisabled";
+  button.innerText = openGamesInNewTab
+    ? "Open games & changes in new tab: Enabled"
+    : "Open games & changes in new tab: Disabled";
+  button.className = openGamesInNewTab
+    ? "settingsButton settingsButtonEnabled"
+    : "settingsButton settingsButtonDisabled";
 }
 
 function ToggleTabCloakGames() {
@@ -50,8 +54,12 @@ function ToggleTabCloakGames() {
 
 function updateTabCloakGamesToggleButton() {
   const button = document.getElementById("tabCloakGamesToggleButton");
-  button.innerText = tabCloakGames ? "Tab cloak games & changes: Enabled" : "Tab cloak games & changes: Disabled";
-  button.className = tabCloakGames ? "settingsButton settingsButtonEnabled" : "settingsButton settingsButtonDisabled";
+  button.innerText = tabCloakGames
+    ? "Tab cloak games & changes: Enabled"
+    : "Tab cloak games & changes: Disabled";
+  button.className = tabCloakGames
+    ? "settingsButton settingsButtonEnabled"
+    : "settingsButton settingsButtonDisabled";
 }
 
 // Load settings when the page is loaded
@@ -260,6 +268,8 @@ function initiateAudioCheck() {
     }
   }, 1000);
 }
+
+initiateAudioCheck(); // 10/29/24 8:59:00 AM - I just realized that the audio was not working because the function was never called lmao
 
 function hideChangelog() {
   const popup = document.getElementById("center-container");
@@ -518,6 +528,18 @@ const gamesData = [
     name: "Ducklife 4",
     img: "assets/ducklife4.png",
     url: "games/ducklife4/ducklife4.html",
+    redirect: false,
+  },
+  {
+    name: "Ducklife 5",
+    img: "assets/ducklife5.png",
+    url: "games/ducklife5/index.html",
+    redirect: false,
+  },
+  {
+    name: "Ducklife 6",
+    img: "assets/ducklife6.png",
+    url: "games/ducklife6/index.html",
     redirect: false,
   },
   {
@@ -1701,8 +1723,464 @@ const gamesData = [
     url: "games/starfox64/index.html",
     redirect: false,
   },
+  {
+    name: "Street Fighter 2",
+    img: "assets/streetfighter.jpg",
+    url: "games/streetfighter2/index.html",
+    redirect: false,
+  },
+  {
+    name: "Rabbit Samurai",
+    img: "assets/rabbitsamurai.jpg",
+    url: "games/rabbitsamurai/index.html",
+    redirect: false,
+  },
+  {
+    name: "Professor Layton",
+    img: "assets/professorlayton.jpg",
+    url: "games/professorlayton/index.html",
+    redirect: false,
+  },
+  {
+    name: "Scribblenauts",
+    img: "assets/scribblenauts.jpg",
+    url: "games/scribblenauts/index.html",
+    redirect: false,
+  },
+  {
+    name: "Harvest Moon",
+    img: "assets/harvestmoon.jpg",
+    url: "games/harvestmoon/index.html",
+    redirect: false,
+  },
+  {
+    name: "Mario Tennis",
+    img: "assets/mariotennis.png",
+    url: "games/mariotennis/index.html",
+    redirect: false,
+  },
+  {
+    name: "Mega Man Zero",
+    img: "assets/megamanzero.jpg",
+    url: "games/megamanzero/index.html",
+    redirect: false,
+  },
+  {
+    name: "Pokemon Mystery Dungeon",
+    img: "assets/pokemonmysterydungeon.jpg",
+    url: "games/pokemonmysterydungeon/index.html",
+    redirect: false,
+  },
+  {
+    name: "Factory Balls",
+    img: "assets/factoryballs.png",
+    url: "games/factoryballs/index.html",
+    redirect: false,
+  },
+  {
+    name: "Sky Wire",
+    img: "assets/skywire.jpg",
+    url: "games/skywire/index.html",
+    redirect: false,
+  },
+  {
+    name: "Sky Wire 2",
+    img: "assets/skywire2.jpg",
+    url: "games/skywire2/index.html",
+    redirect: false,
+  },
+  {
+    name: "Super Mario Flash",
+    img: "assets/supermarioflash.jpg",
+    url: "games/supermarioflash/index.html",
+    redirect: false,
+  },
+  {
+    name: "Super Mario Flash 2",
+    img: "assets/supermarioflash2.png",
+    url: "games/supermarioflash2/index.html",
+    redirect: false,
+  },
+  {
+    name: "Golden Sun",
+    img: "assets/goldensun.jpg",
+    url: "games/goldensun/index.html",
+    redirect: false,
+  },
+  {
+    name: "Metroid Fusion",
+    img: "assets/metroidfusion.jpg",
+    url: "games/metroidfusion/index.html",
+    redirect: false,
+  },
+  {
+    name: "DBZ: Supersonic Warriors",
+    img: "assets/dbzsupersonicwarriors.jpg",
+    url: "games/dbzsupersonicwarriors/index.html",
+    redirect: false,
+  },
+  {
+    name: "Wario Land 4",
+    img: "assets/warioland4.png",
+    url: "games/warioland4/index.html",
+    redirect: false,
+  },
+  {
+    name: "Electric Man 2",
+    img: "assets/electricman2.jpg",
+    url: "games/electricman2/index.html",
+    redirect: false,
+  },
+  {
+    name: "Portal 2",
+    img: "assets/portal2.jpg",
+    url: "games/portal2/index.html",
+    redirect: false,
+  },
+  {
+    name: "Boxing Random",
+    img: "assets/boxingrandom.png",
+    url: "games/boxingrandom/index.html",
+    redirect: false,
+  },
+  {
+    name: "Cell Machine",
+    img: "assets/cellmachine.png",
+    url: "games/cellmachine/index.html",
+    redirect: false,
+  },
+  {
+    name: "Stickman Boost",
+    img: "assets/stickmanboost.jpg",
+    url: "games/stickmanboost/index.html",
+    redirect: false,
+  },
+  {
+    name: "Skibidi Toilet 1v100",
+    img: "assets/skibidi1v100.jpg",
+    url: "games/skibidi1v100/index.html",
+    redirect: false,
+  },
+  {
+    name: "Golden Eye 007",
+    img: "assets/goldeneye007.jpg",
+    url: "games/goldeneye007/index.html",
+    redirect: false,
+  },
+  {
+    name: "Majora's Mask",
+    img: "assets/majorasmask.jpg",
+    url: "games/majorasmask/index.html",
+    redirect: false,
+  },
+  {
+    name: "Paper Mario",
+    img: "assets/papermario.jpg",
+    url: "games/papermario/index.html",
+    redirect: false,
+  },
+  {
+    name: "Mario Golf",
+    img: "assets/mariogolf.png",
+    url: "games/mariogolf/index.html",
+    redirect: false,
+  },
+  {
+    name: "Excite Bike 64",
+    img: "assets/excitebike64.jpg",
+    url: "games/excitebike64/index.html",
+    redirect: false,
+  },
+  {
+    name: "Bowsers Inside Story",
+    img: "assets/bowsersinsidestory.jpg",
+    url: "games/bowsersinsidestory/index.html",
+    redirect: false,
+  },
+  {
+    name: "Spirit Tracks",
+    img: "assets/spirittracks.jpg",
+    url: "games/spirittracks/index.html",
+    redirect: false,
+  },
+  {
+    name: "The Sims 2",
+    img: "assets/thesims2.jpg",
+    url: "games/thesims2/index.html",
+    redirect: false,
+  },
+  {
+    name: "The Sims 3",
+    img: "assets/thesims3.jpg",
+    url: "games/thesims3/index.html",
+    redirect: false,
+  },
+  {
+    name: "Tetris DS",
+    img: "assets/tetrisds.png",
+    url: "games/tetrisds/index.html",
+    redirect: false,
+  },
+  {
+    name: "Sonic Rush",
+    img: "assets/sonicrush.png",
+    url: "games/sonicrush/index.html",
+    redirect: false,
+  },
+  {
+    name: "Super Princess Peach",
+    img: "assets/superprincesspeach.jpg",
+    url: "games/superprincesspeach/index.html",
+    redirect: false,
+  },
+  {
+    name: "Lego Batman",
+    img: "assets/legobatman.jpg",
+    url: "games/legobatman/index.html",
+    redirect: false,
+  },
+  {
+    name: "Doom 2",
+    img: "assets/doom2.png",
+    url: "games/doom2/index.html",
+    redirect: false,
+  },
+  {
+    name: "Duke Nukem Advance",
+    img: "assets/dukenukemadvance.jpg",
+    url: "games/dukenukemadvance/index.html",
+    redirect: false,
+  },
+  {
+    name: "Mario Pinball Land",
+    img: "assets/mariopinballland.jpg",
+    url: "games/mariopinballland/index.html",
+    redirect: false,
+  },
+  {
+    name: "Pacman World",
+    img: "assets/pacmanworld.jpg",
+    url: "games/pacmanworld/index.html",
+    redirect: false,
+  },
+  {
+    name: "Rayman 3",
+    img: "assets/rayman3.jpg",
+    url: "games/rayman3/index.html",
+    redirect: false,
+  },
+  {
+    name: "Shrek 2",
+    img: "assets/shrek2.jpg",
+    url: "games/shrek2/index.html",
+    redirect: false,
+  },
+  {
+    name: "Sim City 2000",
+    img: "assets/simcity.jpg",
+    url: "games/simcity2000/index.html",
+    redirect: false,
+  },
+  {
+    name: "Simpsons Road Rage",
+    img: "assets/simpsonsroadrage.jpg",
+    url: "games/simpsonsroadrage/index.html",
+    redirect: false,
+  },
+  {
+    name: "Diddy Kong Racing",
+    img: "assets/diddykongracing.jpg",
+    url: "games/diddykongracing/index.html",
+    redirect: false,
+  },
+  {
+    name: "Wave Race 64",
+    img: "assets/waverace64.jpg",
+    url: "games/waverace64/index.html",
+    redirect: false,
+  },
+  {
+    name: "Quest 64",
+    img: "assets/quest64.jpg",
+    url: "games/quest64/index.html",
+    redirect: false,
+  },
+  {
+    name: "Gex 64",
+    img: "assets/gex64.png",
+    url: "games/gex64/index.html",
+    redirect: false,
+  },
+  {
+    name: "Duke Nukem 64",
+    img: "assets/dukenukem64.jpg",
+    url: "games/dukenukem64/index.html",
+    redirect: false,
+  },
+  {
+    name: "Mortal Kombat 4",
+    img: "assets/mortalKombat4.jpg",
+    url: "games/mortalKombat4/index.html",
+    redirect: false,
+  },
+  {
+    name: "Bad Piggies",
+    img: "assets/badpiggies.png",
+    url: "games/badpiggies/index.html",
+    redirect: false,
+  },
+  {
+    name: "Swords And Sandals",
+    img: "assets/swordsandsandals.png",
+    url: "games/swordsandsandals/index.html",
+    redirect: false,
+  },
+  {
+    name: "Swords And Sandals 2",
+    img: "assets/swordsandsandals2.png",
+    url: "games/swordsandsandals2/index.html",
+    redirect: false,
+  },
+  {
+    name: "Wordle",
+    img: "assets/wordle.png",
+    url: "games/wordle/index.html",
+    redirect: false,
+  },
+  {
+    name: "Stack",
+    img: "assets/stack.png",
+    url: "games/stack/index.html",
+    redirect: false,
+  },
+  {
+    name: "Skibidi Toilet Attack",
+    img: "assets/skibiditoiletattack.jpg",
+    url: "games/skibiditoiletattack/index.html",
+    redirect: false,
+  },
+  {
+    name: "Moto X3M Pool",
+    img: "assets/motox3mpool.jpg",
+    url: "games/motox3mpool/index.html",
+    redirect: false,
+  },
+  {
+    name: "Offline Paradise",
+    img: "assets/offlineparadise.png",
+    url: "games/offlineparadise/index.html",
+    redirect: false,
+  },
+  {
+    name: "Link To The Past",
+    img: "assets/linktothepast.jpg",
+    url: "games/linktothepast/index.html",
+    redirect: false,
+  },
+  {
+    name: "Donkey Kong Country",
+    img: "assets/donkeykongcountry.png",
+    url: "games/donkeykongcountry/index.html",
+    redirect: false,
+  },
+  {
+    name: "Donkey Kong Country 2",
+    img: "assets/donkeykongcountry2.jpg",
+    url: "games/donkeykongcountry2/index.html",
+    redirect: false,
+  },
+  {
+    name: "Donkey Kong Country 3",
+    img: "assets/donkeykongcountry3.jpg",
+    url: "games/donkeykongcountry3/index.html",
+    redirect: false,
+  },
+  {
+    name: "Super Bomberman",
+    img: "assets/superbomberman.png",
+    url: "games/superbomberman/index.html",
+    redirect: false,
+  },
+  {
+    name: "Mario Paint",
+    img: "assets/mariopaint.jpg",
+    url: "games/mariopaint/index.html",
+    redirect: false,
+  },
+  {
+    name: "Mega Man X",
+    img: "assets/megamanx.png",
+    url: "games/megamanx/index.html",
+    redirect: false,
+  },
+  {
+    name: "Super Mario Rpg",
+    img: "assets/supermariorpg.jpg",
+    url: "games/supermariorpg/index.html",
+    redirect: false,
+  },
+  {
+    name: "Super Tennis",
+    img: "assets/supertennis.jpg",
+    url: "games/supertennis/index.html",
+    redirect: false,
+  },
+  {
+    name: "Wario's Woods",
+    img: "assets/warioswoods.jpg",
+    url: "games/warioswoods/index.html",
+    redirect: false,
+  },
+  {
+    name: "Bubble Tanks 2",
+    img: "assets/bubbletanks2.png",
+    url: "games/bubbletanks2/index.html",
+    redirect: false,
+  },
+  {
+    name: "Choose Your Weapon",
+    img: "assets/chooseyourweapon.png",
+    url: "games/chooseyourweapon/index.html",
+    redirect: false,
+  },
+  {
+    name: "Choose Your Weapon 2",
+    img: "assets/chooseyourweapon.png",
+    url: "games/chooseyourweapon2/index.html",
+    redirect: false,
+  },
+  {
+    name: "Choose Your Weapon 3",
+    img: "assets/chooseyourweapon.png",
+    url: "games/chooseyourweapon3/index.html",
+    redirect: false,
+  },
+  {
+    name: "Connect 4",
+    img: "assets/connect4.png",
+    url: "games/connect4/index.html",
+    redirect: false,
+  },
+  {
+    name: "Electric Box",
+    img: "assets/electricbox.png",
+    url: "games/electricbox/index.html",
+    redirect: false,
+  },
+  {
+    name: "MC Tower Defence 2",
+    img: "assets/mctowerdefence.jpg",
+    url: "games/mctowerdefence2/index.html",
+    redirect: false,
+  },
+  {
+    name: "Cars 2",
+    img: "assets/nologo.png",
+    url: "games/cars2/index.html",
+    redirect: false,
+  },
 ];
-
+// need to fix mgs, and run games
 
 let rows = 0;
 let collumns = 0;
@@ -1743,8 +2221,12 @@ function renderGames(games) {
 
 const changesData = [
   {
+    version: "2.1.7",
+    url: "changes/2.1.7.html",
+  },
+  {
     version: "2.1.6",
-    url: "changes/2.1.6.html"
+    url: "changes/2.1.6.html",
   },
   {
     version: "2.1.5",
